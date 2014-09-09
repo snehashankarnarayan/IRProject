@@ -48,6 +48,13 @@ def getFileList(rootDirName):
             fileList.append(rootDirName + dirName + "/" + xmlFile)
     return fileList
 
+def processFile(fileName):
+    for event, elem in ET.iterparse(fileName):
+        if event == 'end':
+            if(elem.text != None):
+                countString(elem.text)
+        elem.clear() 
+
 def count_words(dirName):
     try:
         global wordCount
@@ -55,7 +62,7 @@ def count_words(dirName):
         fileList = getFileList(dirName)
         for fileName in fileList:
             try:
-                parseFile(fileName)
+                processFile(fileName)
             except xml.etree.ElementTree.ParseError:
                 print "Parse Error"
                 pass        
