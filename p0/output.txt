@@ -1,0 +1,12 @@
+Tiny
+Final wordcount:769707
+Time taken in seconds: 0.467539
+Small
+Final wordcount:14726981
+Time taken in seconds: 9.760684
+Medium
+Final wordcount:194241121
+Time taken in seconds: 135.366598
+Large
+Final wordcount:409974580
+Time taken in seconds: 280.072137
