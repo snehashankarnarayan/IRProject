@@ -54,6 +54,7 @@ def count_words(dirName):
         wordCount = 0
         fileList = getFileList(dirName)
         for fileName in fileList:
+            print wordCount
             try:
                 parseFile(fileName)
             except xml.etree.ElementTree.ParseError:
