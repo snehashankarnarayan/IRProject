@@ -18,7 +18,16 @@ bigDirName = "/phoenix/ir_code/data/books-big/"
 #Globals
 wordCount = 0
 pageCount = 0
+bookCount = 0
 pageText = ""
+
+bookLengthList = []
+pageLengthList = []
+
+bookUniqueLengthList = []
+pageUniqueLengthList = []
+
+bookLength = 0
 
 #Global hashtables/dictionaries
 globalWordHash = Counter()
@@ -42,18 +51,24 @@ def processPage():
     global globalWordHash
     global pageText
     global bookWordSet
+    global pageLengthList
+    global pageLengthUniqueList
+    global bookLength
+    global bookUniqueLength
     pageCount = pageCount + 1
     
     #Text processing in page
     words = re.split(" ", pageText)
-    for( i = 0; i < len(words); i++):
+    for i in range(0, len(words) - 1):
         words[i] = words[i].translate(None, string.punctuation)
 
-        if(globalWordHash.has_key(word)):
-            globalWordHash[word] = globalWordHash[word] + 1
+        if(globalWordHash.has_key(words[i])):
+            globalWordHash[words[i]] = globalWordHash[words[i]] + 1
         else:
-            globalWordHash[word] = 1
+            globalWordHash[words[i]] = 1
     
+    pageLengthList.append(len(words))
+    bookLength = bookLength + len(words)
     #Page specific processing
     wordSet = set(words)
     for word in wordSet:
@@ -64,7 +79,9 @@ def processPage():
             pageWordHash[word] = 1
     
     bookWordSet.update(wordSet)
-    #sys.exit(0)
+    pageUniqueLengthList.append(len(wordSet))
+    bookUniqueLength = bookUniqueLength + len(wordSet)
+
 
 
 
@@ -72,6 +89,15 @@ def processFile(fileName):
     global pageText
     global bookWordHash
     global bookWordSet
+    global bookCount
+    global bookLength
+    global bookUniqueLength
+    global bookLengthList
+    global bookUniqueLengthList
+
+    bookLength = 0
+    bookUniqueLength = 0
+    bookCount = bookCount + 1
     bookWordSet.clear()
     for event, elem in ET.iterparse(fileName):
         if (elem.tag == "page" and event == 'start'):
@@ -88,6 +114,9 @@ def processFile(fileName):
             bookWordHash[word] = bookWordHash[word] + 1
         else:
             bookWordHash[word] = 1
+
+    bookLengthList.append(bookLength)
+    bookUniqueLengthList.append(bookUniqueLength)
     
 
 def processDirectory(dirName):
@@ -110,12 +139,8 @@ def testMe():
     processFile(fileList[0])
     print "WordCount " + str(wordCount)
     print "PageCount " + str(pageCount)
-    print "GlobalWordHash"
-    print globalWordHash
-    print "pageWordHash"
-    print pageWordHash
-    print "BookWordHash"
-    print bookWordHash
+    print bookLengthList
+    print pageLengthList
 
 if __name__ == "__main__":
     t1 = time()
