@@ -10,6 +10,10 @@ from collections import Counter
 from sets import Set
 from globalvars import stats
 
+
+w1list = ["strong","powerful","butter","salt"]
+w2list = ["strong","powerful","butter","salt"]
+
 def processPage():
     stats.pageCount = stats.pageCount + 1
     

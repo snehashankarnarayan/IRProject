@@ -11,6 +11,9 @@ from sets import Set
 from globalvars import stats
 from process_page import processPage
 
+w1list = ["strong","powerful","butter","salt"]
+w2list = ["strong","powerful","butter","salt"]
+
 def processFile(fileName):
 
     stats.bookLength = 0
