@@ -3,12 +3,7 @@
 from collections import Counter
 from sets import Set
 
-class globalvars:
-    #Constants
-    tinyDirName = "/phoenix/ir_code/data/books-tiny/"
-    mediumDirName = "/phoenix/ir_code/data/books-medium/"
-    smallDirName = "/phoenix/ir_code/data/books-small/"
-    bigDirName = "/phoenix/ir_code/data/books-big/"
+class statMaster:
 
     #Globals
     wordCount = 0
@@ -35,4 +30,4 @@ class globalvars:
     #Per book sets
     bookWordSet = Set()
 
-stats = globalvars()
+

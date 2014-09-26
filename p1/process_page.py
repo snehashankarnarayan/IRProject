@@ -8,13 +8,12 @@ from time import time
 import string
 from collections import Counter
 from sets import Set
-from globalvars import stats
 
 
 w1list = ["strong","powerful","butter","salt"]
 w2list = ["strong","powerful","butter","salt"]
 
-def processPage():
+def processPage(stats):
     stats.pageCount = stats.pageCount + 1
     
     #Text processing in page
