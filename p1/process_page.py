@@ -16,12 +16,7 @@ w2list = ["strong","powerful","butter","salt"]
 def processPage(workername, stats):
     #print workername + ":" + str(stats.bookLength)
     stats.pageCount = stats.pageCount + 1
-    words = re.split(" ", stats.pageText)
-    #print stats.pageText
-    stats.bookLength = stats.bookLength + len(words)
-    #print len(words)
-    stats.pageText = ""    
-'''    
+   
     #Text processing in page
     words = re.split(" ", stats.pageText)
     for i in range(0, len(words) - 1):
@@ -33,7 +28,7 @@ def processPage(workername, stats):
             stats.globalWordHash[words[i]] = 1
     
     stats.pageLengthList.append(len(words))
-    stats.bookLength = stats.bookLength + len(words)
+    stats.wordCount = stats.wordCount + len(words)
     #Page specific processing
     wordSet = set(words)
     for word in wordSet:
@@ -46,7 +41,7 @@ def processPage(workername, stats):
     stats.bookWordSet.update(wordSet)
     stats.pageUniqueLengthList.append(len(wordSet))
     stats.bookUniqueLength = stats.bookUniqueLength + len(wordSet)
-'''
 
+    stats.pageText = ""    
 
 

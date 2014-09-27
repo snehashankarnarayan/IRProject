@@ -12,6 +12,7 @@ from process_book import processFile
 from statMaster import statMaster
 from process_stats import processBulkStats
 from process_stats import processFinalStats
+from process_stats import printStats
 import time
 
 def getFileList(rootDirName):
@@ -25,9 +26,10 @@ def getFileList(rootDirName):
             fileCount += 1
     return fileQueue, fileCount
 
-def output(statList):
+def touch(statList):
     for stat in statList:
-        print "here" + str(stat.bookLength)
+        #i = stat.wordCount
+        print "here" + str(stat.wordCount)
 
 def processDirectory(dirName):
     fileQueue, fileCount = getFileList(dirName)
@@ -66,11 +68,11 @@ def processDirectory(dirName):
 
     for i in range(0, fileCount):
         queueElement = fileOutQueue.get()
-        #print queueElement.bookLength
+        #print queueElement.wordCount
         statList.append(queueElement)
         if(len(statList) == 20 or len(statList) == fileCount):
             statListInQueue.put(statList)
-            output(statList)
+            touch(statList)
             statListCount += 1
             del statList[:]
         
@@ -81,8 +83,7 @@ def processDirectory(dirName):
     cleanUpProcesses(fileworkerList, statworkerList)
     
     finalstats = processFinalStats(statFinalList)
-    print "word count: " + str(finalstats.bookLength)
-
+    printStats(finalstats)
 
 def cleanUpProcesses(fileworkerList, statworkerList):
     #Terminate all remaining processes

@@ -22,6 +22,7 @@ def processFile(workerName, fileQueue, outqueue):
         stats.bookLength = 0
         stats.bookUniqueLength = 0
         stats.bookWordSet.clear()
+        stats.bookCount += 1
         for event, elem in ET.iterparse(fileName):
             if (elem.tag == "page" and event == 'start'):
                 stats.pageText = ""
@@ -31,7 +32,7 @@ def processFile(workerName, fileQueue, outqueue):
                 processPage(workerName, stats)
                 stats.pageText = ""
             elem.clear() 
-        '''
+        
         #Update book hash
         for word in stats.bookWordSet:
             if(stats.bookWordHash.has_key(word)):
@@ -39,7 +40,7 @@ def processFile(workerName, fileQueue, outqueue):
             else:
                 stats.bookWordHash[word] = 1
 
-        stats.bookLengthList.append(stats.bookLength)
-        stats.bookUniqueLengthList.append(stats.bookUniqueLength)'''
+        stats.bookLengthList.append(stats.wordCount)
+        stats.bookUniqueLengthList.append(stats.bookUniqueLength)
         outqueue.put(stats)
     
