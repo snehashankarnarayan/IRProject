@@ -13,9 +13,15 @@ from sets import Set
 w1list = ["strong","powerful","butter","salt"]
 w2list = ["strong","powerful","butter","salt"]
 
-def processPage(stats):
+def processPage(workername, stats):
+    #print workername + ":" + str(stats.bookLength)
     stats.pageCount = stats.pageCount + 1
-    
+    words = re.split(" ", stats.pageText)
+    #print stats.pageText
+    stats.bookLength = stats.bookLength + len(words)
+    #print len(words)
+    stats.pageText = ""    
+'''    
     #Text processing in page
     words = re.split(" ", stats.pageText)
     for i in range(0, len(words) - 1):
@@ -40,7 +46,7 @@ def processPage(stats):
     stats.bookWordSet.update(wordSet)
     stats.pageUniqueLengthList.append(len(wordSet))
     stats.bookUniqueLength = stats.bookUniqueLength + len(wordSet)
-
+'''
 
 
 

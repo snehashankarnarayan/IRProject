@@ -15,9 +15,8 @@ import multiprocessing as mp
 w1list = ["strong","powerful","butter","salt"]
 w2list = ["strong","powerful","butter","salt"]
 
-def processFile(fileQueue, outqueue):
-
-    while(fileQueue.empty() == False):
+def processFile(workerName, fileQueue, outqueue):
+    while True:
         fileName = fileQueue.get()
         stats = statMaster()
         stats.bookLength = 0
@@ -25,13 +24,14 @@ def processFile(fileQueue, outqueue):
         stats.bookWordSet.clear()
         for event, elem in ET.iterparse(fileName):
             if (elem.tag == "page" and event == 'start'):
-                stats.pageText = " "
+                stats.pageText = ""
             if(elem.tag == "line" and event == 'end' and elem.text != None):
                 stats.pageText = stats.pageText + " " + elem.text
             if(elem.tag == "page" and event == 'end'):
-                processPage(stats)
+                processPage(workerName, stats)
+                stats.pageText = ""
             elem.clear() 
-
+        '''
         #Update book hash
         for word in stats.bookWordSet:
             if(stats.bookWordHash.has_key(word)):
@@ -40,6 +40,6 @@ def processFile(fileQueue, outqueue):
                 stats.bookWordHash[word] = 1
 
         stats.bookLengthList.append(stats.bookLength)
-        stats.bookUniqueLengthList.append(stats.bookUniqueLength)
+        stats.bookUniqueLengthList.append(stats.bookUniqueLength)'''
         outqueue.put(stats)
     
