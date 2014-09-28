@@ -40,6 +40,5 @@ def processFile(workerName, fileQueue, outqueue):
 
         stats.bookLengthList.append(stats.wordCount)
         stats.bookUniqueLengthList.append(stats.bookUniqueLength)
-        print stats.strongWindowHash
         outqueue.put(stats)
     

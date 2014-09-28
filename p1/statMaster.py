@@ -40,7 +40,7 @@ class statMaster:
         self.powerfulWindowHash = Counter()
 
         self.butterHash = Counter()
-        self.butterBookHash = Counter()
+        self.butterAdjacentHash = Counter()
         self.butterWindowHash = Counter()
 
         self.saltHash = Counter()
