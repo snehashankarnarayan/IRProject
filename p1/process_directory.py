@@ -10,7 +10,8 @@ from collections import Counter
 from sets import Set
 from process_book import processFile
 from statMaster import statMaster
-from process_stats import processBulkStats, processFinalStats, printStats, outputToFile
+from process_stats import processBulkStats, processFinalStats, printStats
+from generate_output import generate_output
 import time
 from pprint import pprint
 
@@ -85,7 +86,7 @@ def processDirectory(datasize, dirName):
     finalstats = processFinalStats(statFinalList)
     printStats(finalstats)
 
-    outputToFile(datasize, finalstats)
+    generate_output(datasize, finalstats)
 
 def cleanUpProcesses(fileworkerList, statworkerList):
     #Terminate all remaining processes

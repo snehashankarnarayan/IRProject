@@ -19,14 +19,15 @@ def addUpStats(statList):
         cStats.pageWordHash.update(stats.pageWordHash)
 
         #Special word Hashes
-
-
+        cStats.strongHash.update(stats.strongHash)
+        cStats.strongAdjacentHash.update(stats.strongAdjacentHash)
+        cStats.strongWindowHash.update(stats.strongWindowHash)
+    
         
     return cStats
 
 def processBulkStats(workerName, statListInQueue, statListOutQueue):
     while True:
-        print workerName
         statList = statListInQueue.get()
         cumulativeStats = addUpStats(statList)
         statListOutQueue.put(cumulativeStats)
@@ -41,11 +42,12 @@ def printStats(stats):
     print "Book count: " + str(stats.bookCount)
    
     print stats.globalWordHash.most_common(50)
-    print stats.bookWordHash.most_common(50)
-    print stats.pageWordHash.most_common(50)
+    print "strong"
+    print stats.strongHash.most_common(50)
+    print "strong window"
+    print stats.strongWindowHash.most_common(50)
 
-def outputToFile(datasize, stats):
-    outputFileName = "snehas_" + datasize + ".txt"
-    fp = open(outputFileName, "w")
-    fp.write(outputFileName)
+    print "strong adjacency"
+    print stats.strongAdjacentHash.most_common(50)
+    
 
