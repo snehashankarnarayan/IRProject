@@ -11,9 +11,7 @@ from sets import Set
 from statMaster import statMaster
 from process_page import processPage
 import multiprocessing as mp
-
-w1list = ["strong","powerful","butter","salt"]
-w2list = ["strong","powerful","butter","salt"]
+from pprint import pprint
 
 def processFile(workerName, fileQueue, outqueue):
     while True:
@@ -42,5 +40,7 @@ def processFile(workerName, fileQueue, outqueue):
 
         stats.bookLengthList.append(stats.wordCount)
         stats.bookUniqueLengthList.append(stats.bookUniqueLength)
+        print stats.globalWordHash.most_common(10)
+        pprint(stats.__dict__)
         outqueue.put(stats)
     

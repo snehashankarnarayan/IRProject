@@ -7,10 +7,22 @@ from statMaster import statMaster
 def addUpStats(statList):
     cStats = statMaster()
     for stats in statList:
+        #Counts
+        #print stats.globalWordHash.most_common(10)
+        #print cStats.globalWordHash.most_common(10)
         cStats.wordCount += stats.wordCount
         cStats.bookUniqueLength += stats.bookUniqueLength
         cStats.pageCount += stats.pageCount
         cStats.bookCount += stats.bookCount
+
+        #Global Hashes
+        cStats.globalWordHash.update(stats.globalWordHash)
+        cStats.bookWordHash.update(stats.bookWordHash)
+        cStats.pageWordHash.update(stats.pageWordHash)
+
+        #Special word Hashes
+
+
         
     return cStats
 
@@ -29,3 +41,12 @@ def printStats(stats):
     print "Unique Token count: " + str(stats.bookUniqueLength)
     print "Page count: " + str(stats.pageCount)
     print "Book count: " + str(stats.bookCount)
+   
+    print stats.globalWordHash
+    print stats.globalWordHash.most_common(50)
+
+def outputToFile(datasize, stats):
+    outputFileName = "snehas_" + datasize + ".txt"
+    fp = open(outputFileName, "w")
+    fp.write(outputFileName)
+

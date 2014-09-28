@@ -9,9 +9,34 @@ import string
 from collections import Counter
 from sets import Set
 
+def checkAndUpdate(stats, key, word):
 
-w1list = ["strong","powerful","butter","salt"]
-w2list = ["strong","powerful","butter","salt"]
+    if(key == "normal"):
+        if(stats.pageWordHash.has_key(word)):
+            stats.pageWordHash[word] = stats.pageWordHash[word] + 1
+        else:
+            stats.pageWordHash[word] = 1
+    
+    elif(key == "strong"):
+        if(stats.strongHash.has_key(word)):
+            stats.strongHash[word] = stats.strongHash[word] + 1
+        else:
+            stats.strongHash[word] = 1
+
+def initializeExistenceMap(exist):
+    exist["strong"] = False
+    exist["powerful"] = False
+    exist["salt"] = False
+    exist["butter"] = False
+    exist["james"] = False
+    exist["church"] = False
+    exist["washington"] = False
+    return exist
+
+def checkExistence(existenceMap, key, word):
+    if(existenceMap[key] == False):
+        existenceMap[key] = re.match(key, word, re.IGNORECASE) 
+    return existenceMap
 
 def processPage(workername, stats):
     #print workername + ":" + str(stats.bookLength)
@@ -20,7 +45,7 @@ def processPage(workername, stats):
     #Text processing in page
     words = re.split(" ", stats.pageText)
     for i in range(0, len(words) - 1):
-        words[i] = words[i].translate(None, string.punctuation)
+        words[i] = words[i].translate(None, string.punctuation).strip().lower()
 
         if(stats.globalWordHash.has_key(words[i])):
             stats.globalWordHash[words[i]] = stats.globalWordHash[words[i]] + 1
@@ -29,14 +54,29 @@ def processPage(workername, stats):
     
     stats.pageLengthList.append(len(words))
     stats.wordCount = stats.wordCount + len(words)
-    #Page specific processing
+
+    #Unique words in Page specific processing
     wordSet = set(words)
+
+    existenceMap= {}
+    existenceMap = initializeExistenceMap(existenceMap)
+
     for word in wordSet:
         word = word.translate(None, string.punctuation)
-        if(stats.pageWordHash.has_key(word)):
-            stats.pageWordHash[word] = stats.pageWordHash[word] + 1
-        else:
-            stats.pageWordHash[word] = 1
+       
+        existenceMap = checkExistence(existenceMap, "strong", word)
+        existenceMap = checkExistence(existenceMap, "powerful", word)
+        existenceMap = checkExistence(existenceMap, "salt", word)
+        existenceMap = checkExistence(existenceMap, "butter", word)
+        existenceMap = checkExistence(existenceMap, "james", word)
+        existenceMap = checkExistence(existenceMap, "church", word)
+        existenceMap = checkExistence(existenceMap, "powerful", word)
+        
+        #Check normal word hash
+        checkAndUpdate(stats, "normal", word)
+    
+    for word in wordSet:
+        checkAndUpdate(stats, "strong", word)
     
     stats.bookWordSet.update(wordSet)
     stats.pageUniqueLengthList.append(len(wordSet))

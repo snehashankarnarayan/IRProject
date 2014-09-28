@@ -10,10 +10,9 @@ from collections import Counter
 from sets import Set
 from process_book import processFile
 from statMaster import statMaster
-from process_stats import processBulkStats
-from process_stats import processFinalStats
-from process_stats import printStats
+from process_stats import processBulkStats, processFinalStats, printStats, outputToFile
 import time
+from pprint import pprint
 
 def getFileList(rootDirName):
     tinyDir =  listdir(rootDirName);
@@ -31,7 +30,7 @@ def touch(statList):
         #i = stat.wordCount
         print "here" + str(stat.wordCount)
 
-def processDirectory(dirName):
+def processDirectory(datasize, dirName):
     fileQueue, fileCount = getFileList(dirName)
     fileOutQueue = mp.Queue()
     statListInQueue = mp.Queue()
@@ -68,7 +67,13 @@ def processDirectory(dirName):
 
     for i in range(0, fileCount):
         queueElement = fileOutQueue.get()
-        #print queueElement.wordCount
+        print queueElement.wordCount
+        print queueElement.globalWordHash.most_common(10)
+        print queueElement.bookCount 
+        #print queueElement._dict_
+        print "inside print"
+        pprint(queueElement.__dict__)
+        print len(queueElement.globalWordHash)
         statList.append(queueElement)
         if(len(statList) == 20 or len(statList) == fileCount):
             statListInQueue.put(statList)
@@ -84,6 +89,8 @@ def processDirectory(dirName):
     
     finalstats = processFinalStats(statFinalList)
     printStats(finalstats)
+
+    outputToFile(datasize, finalstats)
 
 def cleanUpProcesses(fileworkerList, statworkerList):
     #Terminate all remaining processes

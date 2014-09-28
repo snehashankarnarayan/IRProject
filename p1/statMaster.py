@@ -27,6 +27,36 @@ class statMaster:
     bookWordHash = Counter()
     pageWordHash = Counter()
 
+    #Word Correlation hashes
+    strongHash = Counter()
+    strongWindowHash = Counter()
+    strongAdjacentHash = Counter()
+
+    powerfulHash = Counter()
+    powerfulAdjacentHash = Counter()
+    powerfulWindowHash = Counter()
+
+    butterHash = Counter()
+    butterBookHash = Counter()
+    butterWindowHash = Counter()
+
+    saltHash = Counter()
+    saltAdjacentHash = Counter()
+    saltWindowHash = Counter()
+
+    jamesHash = Counter()
+    jamesAdjacentHash = Counter()
+    jamesWindowHash = Counter()
+
+    washingtonHash = Counter()
+    washingtonAdjacentHash = Counter()
+    washingtonWindowHash = Counter()
+
+    churchHash = Counter()
+    churchAdjacentHash = Counter()
+    churchWindowHash = Counter()
+
+
     #Per book sets
     bookWordSet = Set()
 

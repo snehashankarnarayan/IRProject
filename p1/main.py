@@ -20,13 +20,13 @@ if __name__ == "__main__":
     if sys.argv[1] == "test":
         testMe()
     elif sys.argv[1] == "tiny":
-        processDirectory(tinyDirName)
+        processDirectory(sys.argv[1], tinyDirName)
     elif sys.argv[1] == "small":
-        processDirectory(smallDirName)
+        processDirectory(sys.argv[1], smallDirName)
     elif sys.argv[1] == "medium":
-        processDirectory(mediumDirName)
+        processDirectory(sys.argv[1], mediumDirName)
     elif sys.argv[1] == "big":
-        processDirectory(bigDirName)
+        processDirectory(sys.argv[1], bigDirName)
     t2 = time()
     minutes = (t2 - t1)/60.0
     print 'Time taken in seconds: %f' %(t2-t1)
