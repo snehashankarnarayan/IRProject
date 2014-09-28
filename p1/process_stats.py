@@ -8,8 +8,6 @@ def addUpStats(statList):
     cStats = statMaster()
     for stats in statList:
         #Counts
-        #print stats.globalWordHash.most_common(10)
-        #print cStats.globalWordHash.most_common(10)
         cStats.wordCount += stats.wordCount
         cStats.bookUniqueLength += stats.bookUniqueLength
         cStats.pageCount += stats.pageCount
@@ -42,8 +40,9 @@ def printStats(stats):
     print "Page count: " + str(stats.pageCount)
     print "Book count: " + str(stats.bookCount)
    
-    print stats.globalWordHash
     print stats.globalWordHash.most_common(50)
+    print stats.bookWordHash.most_common(50)
+    print stats.pageWordHash.most_common(50)
 
 def outputToFile(datasize, stats):
     outputFileName = "snehas_" + datasize + ".txt"

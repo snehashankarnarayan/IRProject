@@ -40,7 +40,5 @@ def processFile(workerName, fileQueue, outqueue):
 
         stats.bookLengthList.append(stats.wordCount)
         stats.bookUniqueLengthList.append(stats.bookUniqueLength)
-        print stats.globalWordHash.most_common(10)
-        pprint(stats.__dict__)
         outqueue.put(stats)
     

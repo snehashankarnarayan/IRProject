@@ -26,9 +26,11 @@ def getFileList(rootDirName):
     return fileQueue, fileCount
 
 def touch(statList):
+    fp = open("trash.txt","w")
     for stat in statList:
         #i = stat.wordCount
-        print "here" + str(stat.wordCount)
+        fp.write(str(stat.wordCount))
+        #print "here" + str(stat.wordCount)
 
 def processDirectory(datasize, dirName):
     fileQueue, fileCount = getFileList(dirName)
@@ -67,13 +69,6 @@ def processDirectory(datasize, dirName):
 
     for i in range(0, fileCount):
         queueElement = fileOutQueue.get()
-        print queueElement.wordCount
-        print queueElement.globalWordHash.most_common(10)
-        print queueElement.bookCount 
-        #print queueElement._dict_
-        print "inside print"
-        pprint(queueElement.__dict__)
-        print len(queueElement.globalWordHash)
         statList.append(queueElement)
         if(len(statList) == 20 or len(statList) == fileCount):
             statListInQueue.put(statList)

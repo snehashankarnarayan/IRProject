@@ -4,60 +4,57 @@ from collections import Counter
 from sets import Set
 
 class statMaster:
+    def __init__(self):
+        #Globals
+        self.wordCount = 0
+        self.pageCount = 0
+        self.bookCount = 0
+        self.pageText = ""
 
-    #Globals
-    wordCount = 0
-    pageCount = 0
-    bookCount = 0
-    pageText = ""
+        #Per book sets
+        self.bookWordSet = Set()
+        
+        #Length of all books
+        self.bookLengthList = []
+        self.pageLengthList = []
 
-    #Length of all books
-    bookLengthList = []
-    pageLengthList = []
+        #Unique length of all books and pages
+        self.bookUniqueLengthList = []
+        self.pageUniqueLengthList = []
 
-    #Unique length of all books and pages
-    bookUniqueLengthList = []
-    pageUniqueLengthList = []
+        self.bookLength = 0
+        self.bookUniqueLength = 0
 
-    bookLength = 0
-    bookUniqueLength = 0
+        #Global hashtables/dictionaries
+        self.globalWordHash = Counter()
+        self.bookWordHash = Counter()
+        self.pageWordHash = Counter()
 
-    #Global hashtables/dictionaries
-    globalWordHash = Counter()
-    bookWordHash = Counter()
-    pageWordHash = Counter()
+        #Word Correlation hashes
+        self.strongHash = Counter()
+        self.strongWindowHash = Counter()
+        self.strongAdjacentHash = Counter()
 
-    #Word Correlation hashes
-    strongHash = Counter()
-    strongWindowHash = Counter()
-    strongAdjacentHash = Counter()
+        self.powerfulHash = Counter()
+        self.powerfulAdjacentHash = Counter()
+        self.powerfulWindowHash = Counter()
 
-    powerfulHash = Counter()
-    powerfulAdjacentHash = Counter()
-    powerfulWindowHash = Counter()
+        self.butterHash = Counter()
+        self.butterBookHash = Counter()
+        self.butterWindowHash = Counter()
 
-    butterHash = Counter()
-    butterBookHash = Counter()
-    butterWindowHash = Counter()
+        self.saltHash = Counter()
+        self.saltAdjacentHash = Counter()
+        self.saltWindowHash = Counter()
 
-    saltHash = Counter()
-    saltAdjacentHash = Counter()
-    saltWindowHash = Counter()
+        self.jamesHash = Counter()
+        self.jamesAdjacentHash = Counter()
+        self.jamesWindowHash = Counter()
 
-    jamesHash = Counter()
-    jamesAdjacentHash = Counter()
-    jamesWindowHash = Counter()
+        self.washingtonHash = Counter()
+        self.washingtonAdjacentHash = Counter()
+        self.washingtonWindowHash = Counter()
 
-    washingtonHash = Counter()
-    washingtonAdjacentHash = Counter()
-    washingtonWindowHash = Counter()
-
-    churchHash = Counter()
-    churchAdjacentHash = Counter()
-    churchWindowHash = Counter()
-
-
-    #Per book sets
-    bookWordSet = Set()
-
-
+        self.churchHash = Counter()
+        self.churchAdjacentHash = Counter()
+        self.churchWindowHash = Counter()
