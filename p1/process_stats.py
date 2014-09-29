@@ -7,6 +7,7 @@ from statMaster import statMaster
 def addUpStats(statList):
     cStats = statMaster()
     for stats in statList:
+        print "Consolidating stats ... " 
         #Counts
         cStats.wordCount += stats.wordCount
     #    cStats.bookUniqueLength += stats.bookUniqueLength

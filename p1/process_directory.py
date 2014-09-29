@@ -38,6 +38,7 @@ def processDirectory(datasize, dirName):
     fileOutQueue = mp.Queue()
     statListInQueue = mp.Queue()
     statListOutQueue = mp.Queue()
+    heapInQueue = mp.Queue()
     statListCount = 0
     statFinalList = []
     
@@ -68,9 +69,14 @@ def processDirectory(datasize, dirName):
         statworker.start()
         statworkerList.append(statworker)
 
+    #Deal with heaplaw
+    heapworker = mp.Process(target = processHeapLaw, args = ("heapworker", heapInQueue, )
+    heapworker.start()
+
     for i in range(0, fileCount):
         queueElement = fileOutQueue.get()
         statList.append(queueElement)
+        heapInQueue.put(queueElement.bookWordSet, queueElement.wordCount)
         if(len(statList) == 20 or len(statList) == fileCount):
             statListInQueue.put(statList)
             touch(statList)
@@ -85,7 +91,8 @@ def processDirectory(datasize, dirName):
             gc.collect()
 
     cleanUpProcesses(fileworkerList, statworkerList)
-    
+    heapworker.terminate()
+
     finalstats = processFinalStats(statFinalList)
     #printStats(finalstats)
     computeExtraStats(datasize, finalstats)
