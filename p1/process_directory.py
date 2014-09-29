@@ -88,7 +88,7 @@ def processDirectory(datasize, dirName):
     
     finalstats = processFinalStats(statFinalList)
     #printStats(finalstats)
-    computeExtraStats(finalstats)
+    computeExtraStats(datasize, finalstats)
 
     generate_output(datasize, finalstats)
 

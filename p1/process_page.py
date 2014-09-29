@@ -18,43 +18,43 @@ def checkAndUpdatePageStats(stats, key, word, eMap):
             stats.pageWordHash[word] = 1
     
     elif(eMap[key] == True):
-        if(key == "strong" and word not in stopwords):
+        if(key == "strong" and word not in stopwords and word != "strong"):
             if(stats.strongHash.has_key(word)):
                 stats.strongHash[word] = stats.strongHash[word] + 1
             else:
                 stats.strongHash[word] = 1
     
-        elif(key == "powerful" and word not in stopwords ):
+        elif(key == "powerful" and word not in stopwords and word != "powerful"):
             if(stats.powerfulHash.has_key(word)):
                 stats.powerfulHash[word] = stats.powerfulHash[word] + 1
             else:
                 stats.powerfulHash[word] = 1
 
-        elif(key == "james" and word not in stopwords):
+        elif(key == "james" and word not in stopwords and word != "james"):
             if(stats.jamesHash.has_key(word)):
                 stats.jamesHash[word] = stats.jamesHash[word] + 1
             else:
                 stats.jamesHash[word] = 1
 
-        elif(key == "salt" and word not in stopwords):
+        elif(key == "salt" and word not in stopwords and word != "salt"):
             if(stats.saltHash.has_key(word)):
                 stats.saltHash[word] = stats.saltHash[word] + 1
             else:
                 stats.saltHash[word] = 1
 
-        elif(key == "butter" and word not in stopwords):
+        elif(key == "butter" and word not in stopwords and word != "butter"):
             if(stats.butterHash.has_key(word)):
                 stats.butterHash[word] = stats.butterHash[word] + 1
             else:
                 stats.butterHash[word] = 1
 
-        elif(key == "washington" and word not in stopwords):
+        elif(key == "washington" and word not in stopwords and word != "washington"):
             if(stats.washingtonHash.has_key(word)):
                 stats.washingtonHash[word] = stats.washingtonHash[word] + 1
             else:
                 stats.washingtonHash[word] = 1
 
-        elif(key == "church" and word not in stopwords):
+        elif(key == "church" and word not in stopwords and word != "church"):
             if(stats.churchHash.has_key(word)):
                 stats.churchHash[word] = stats.churchHash[word] + 1
             else:
@@ -108,43 +108,43 @@ def checkAndUpdateAdjacency(stats, word, eMap, key):
 
 def checkAndUpdateWindowHash(stats, word, eMap, key): 
     if(eMap[key] == True):
-        if(key == "strong" and word not in stopwords):
+        if(key == "strong" and word not in stopwords and word != "strong"):
             if(stats.strongWindowHash.has_key(word)):
                 stats.strongWindowHash[word] = stats.strongWindowHash[word] + 1
             else:
                 stats.strongWindowHash[word] = 1
         
-        elif(key == "powerful" and word not in stopwords):
+        elif(key == "powerful" and word not in stopwords and word != "powerful"):
             if(stats.powerfulWindowHash.has_key(word)):
                 stats.powerfulWindowHash[word] = stats.powerfulWindowHash[word] + 1
             else:
                 stats.powerfulWindowHash[word] = 1
         
-        elif(key == "salt" and word not in stopwords):
+        elif(key == "salt" and word not in stopwords and word != "salt"):
             if(stats.saltWindowHash.has_key(word)):
                 stats.saltWindowHash[word] = stats.saltWindowHash[word] + 1
             else:
                 stats.saltWindowHash[word] = 1
     
-        elif(key == "butter" and word not in stopwords):
+        elif(key == "butter" and word not in stopwords and word != "butter"):
             if(stats.butterWindowHash.has_key(word)):
                 stats.butterWindowHash[word] = stats.butterWindowHash[word] + 1
             else:
                 stats.butterWindowHash[word] = 1
     
-        elif(key == "james" and word not in stopwords):
+        elif(key == "james" and word not in stopwords and word != "james"):
             if(stats.jamesWindowHash.has_key(word)):
                 stats.jamesWindowHash[word] = stats.jamesWindowHash[word] + 1
             else:
                 stats.jamesWindowHash[word] = 1
     
-        elif(key == "church" and word not in stopwords):
+        elif(key == "church" and word not in stopwords and word != "church"):
             if(stats.churchWindowHash.has_key(word)):
                 stats.churchWindowHash[word] = stats.churchWindowHash[word] + 1
             else:
                 stats.churchWindowHash[word] = 1
         
-        elif(key == "washington" and word not in stopwords):
+        elif(key == "washington" and word not in stopwords and word != "washington"):
             if(stats.washingtonWindowHash.has_key(word)):
                 stats.washingtonWindowHash[word] = stats.washingtonWindowHash[word] + 1
             else:
@@ -164,11 +164,11 @@ def checkExistenceAndPrecedence(stats, existenceMap, key, word, PrecedingWord):
     value = False
     if(key == word):
         value = True
-    existenceMap[key] = value
-    
-    if(value == True):
+        existenceMap[key] = value
+   
+    if(value == True and PrecedingWord != None):
         if(key == "james" and PrecedingWord not in stopwords):
-            if(stats.jamesPredecingHash.has_key(PrecedingWord)):
+            if(stats.jamesPrecedingHash.has_key(PrecedingWord)):
                 stats.jamesPrecedingHash[PrecedingWord] = stats.jamesPrecedingHash[PrecedingWord] + 1
             else:
                 stats.jamesPrecedingHash[PrecedingWord] = 1
@@ -234,7 +234,7 @@ def processPage(workername, stats):
     #Text processing in page
     words = re.split(" ", stats.pageText)
     cleanedwords = []
-    precedingWord = ""
+    precedingWord = None
     for i in range(0, len(words) - 1):
         word = words[i].translate(None, string.punctuation).strip().lower()
         if(word != ""):
@@ -265,13 +265,13 @@ def processPage(workername, stats):
         adjacencyMap = initializeExistenceMap(adjacencyMap)
         
         #Deal with existence and precedence
-        existenceMap = checkExistenceAndPrecedence(existenceMap, "strong", word, precedingWord)
-        existenceMap = checkExistenceAndPrecedence(existenceMap, "powerful", word, precedingWord)
-        existenceMap = checkExistenceAndPrecedence(existenceMap, "salt", word, precedingWord)
-        existenceMap = checkExistenceAndPrecedence(existenceMap, "butter", word, precedingWord)
-        existenceMap = checkExistenceAndPrecedence(existenceMap, "james", word, precedingWord)
-        existenceMap = checkExistenceAndPrecedence(existenceMap, "church", word, precedingWord)
-        existenceMap = checkExistenceAndPrecedence(existenceMap, "washington", word, precedingWord)
+        existenceMap = checkExistenceAndPrecedence(stats, existenceMap, "strong", word, precedingWord)
+        existenceMap = checkExistenceAndPrecedence(stats, existenceMap, "powerful", word, precedingWord)
+        existenceMap = checkExistenceAndPrecedence(stats, existenceMap, "salt", word, precedingWord)
+        existenceMap = checkExistenceAndPrecedence(stats, existenceMap, "butter", word, precedingWord)
+        existenceMap = checkExistenceAndPrecedence(stats, existenceMap, "james", word, precedingWord)
+        existenceMap = checkExistenceAndPrecedence(stats, existenceMap, "church", word, precedingWord)
+        existenceMap = checkExistenceAndPrecedence(stats, existenceMap, "washington", word, precedingWord)
 
         #Deal with adjacency
         adjacencyMap = checkExistence(adjacencyMap, "strong", word)
@@ -281,7 +281,9 @@ def processPage(workername, stats):
         adjacencyMap = checkExistence(adjacencyMap, "james", word)
         adjacencyMap = checkExistence(adjacencyMap, "church", word)
         adjacencyMap = checkExistence(adjacencyMap, "washington", word)
-
+        
+        precedingWord = word
+        
     stats.pageLengthList.append(len(words))
     stats.wordCount = stats.wordCount + len(words)
 
@@ -301,11 +303,10 @@ def processPage(workername, stats):
         checkAndUpdatePageStats(stats, "washington", word, existenceMap)
         checkAndUpdatePageStats(stats, "church", word, existenceMap)
     
-    #stats.bookWordSet.update(wordSet)
+    stats.bookWordSet.update(wordSet)
     stats.pageUniqueLengthList.append(len(wordSet))
-    stats.bookUniqueLength = stats.bookUniqueLength + len(wordSet)
     
-    print "unique: " +  str(len(wordSet)) + " wordcount " + str(len(words))
+    #print "unique: " +  str(len(wordSet)) + " wordcount " + str(len(words))
     
     stats.pageText = ""    
 

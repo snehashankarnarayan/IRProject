@@ -9,10 +9,10 @@ def addUpStats(statList):
     for stats in statList:
         #Counts
         cStats.wordCount += stats.wordCount
-        cStats.bookUniqueLength += stats.bookUniqueLength
+    #    cStats.bookUniqueLength += stats.bookUniqueLength
         cStats.pageCount += stats.pageCount
         cStats.bookCount += stats.bookCount
-
+        cStats.bookWordSet.update(stats.bookWordSet)
         #Global Hashes
         cStats.globalWordHash.update(stats.globalWordHash)
         cStats.bookWordHash.update(stats.bookWordHash)
@@ -72,9 +72,23 @@ def printStats(stats):
     print "Unique Token count: " + str(stats.bookUniqueLength)
     print "Page count: " + str(stats.pageCount)
     print "Book count: " + str(stats.bookCount)
+    print "washington"
+    print stats.washingtonHash.most_common(50)
+    print "strong"
+    print stats.strongHash.most_common(50)
+    print "butter"
+    print stats.butterHash.most_common(50)
+    print "powerful"
+    print stats.powerfulHash.most_common(50)
+    print "salt"
+    print stats.saltHash.most_common(50)
+    print "church"
+    print stats.churchHash.most_common(50)
+    print "james"
+    print stats.jamesHash.most_common(50)
    
-def computeExtraStats(stats):
-    fp = open("special_stats.txt", "w")
+def computeExtraStats(datasize, stats):
+    fp = open("special_stat_s" + datasize + ".txt", "w")
     lines = []
 
     #Analyze strong
@@ -107,7 +121,7 @@ def computeExtraStats(stats):
 
     #Word adjacency - james
     wordlist = stats.jamesAdjacentHash.most_common(5)
-    prelist = stats.jamesPrecedentHash.most_common(5)
+    prelist = stats.jamesPrecedingHash.most_common(5)
     
     for item in wordlist:
         line = "James " + item[0] + " " + str(item[1]) + "\n"
@@ -119,16 +133,26 @@ def computeExtraStats(stats):
     
     #Word adjacency - washington
     wordlist = stats.washingtonAdjacentHash.most_common(5)
+    prelist = stats.washingtonPrecedingHash.most_common(5)
     
     for item in wordlist:
         line = "washington " + item[0] + " " + str(item[1]) + "\n"
         lines.append(line)
 
+    for item in prelist:
+        line = "washington precedence" + item[0] + " " + str(item[1]) + "\n"
+        lines.append(line)
+    
     #Word adjacency - church
     wordlist = stats.churchAdjacentHash.most_common(5)
+    prelist = stats.churchPrecedingHash.most_common(5)
     
     for item in wordlist:
         line = "church " + item[0] + " " + str(item[1]) + "\n"
+        lines.append(line)
+    
+    for item in prelist:
+        line = "church precedence" + item[0] + " " + str(item[1]) + "\n"
         lines.append(line)
     
     #Final write

@@ -23,21 +23,22 @@ def generate_output(datasize, stats):
     line = myname + " " + datasize + " " + "TO " + str(stats.wordCount) + "\n"
     lines.append(line)
 
-    line = myname + " " + datasize + " " + "TU " + str(stats.bookUniqueLength) + "\n"
+    line = myname + " " + datasize + " " + "TU " + str(len(stats.bookWordSet)) + "\n"
     lines.append(line)
     
     #The top 50 things
     sortedList = stats.globalWordHash.most_common()
 
-    for i in range(0, 49):
+    for i in range(0, 50):
         item = sortedList[i]
         word = item[0]
-        tokenBF = stats.pageWordHash[word]
-        tokenPF = stats.bookWordHash[word]
-        tokenP = round(float(tokenBF)/stats.wordCount, 6)
+        tokenPF = stats.pageWordHash[word]
+        tokenBF = stats.bookWordHash[word]
+        tokenTF = stats.globalWordHash[word]
+        tokenP = round(float(tokenTF)/stats.wordCount, 8)
         tokenPR = tokenP * (i + 1)
         
-        line = myname + " " + datasize + " " + str(i+1) + " " + word + " " + str(tokenBF) + " " + str(tokenPF) + " " + str(tokenP) + " " + str(tokenPR) + "\n"
+        line = myname + " " + datasize + " " + str(i+1) + " " + word + " " + str(tokenBF) + " " + str(tokenPF) + " " + str(tokenTF) + " " + str(tokenP) + " " + str(tokenPR) + "\n"
         lines.append(line)
         
     
@@ -45,12 +46,13 @@ def generate_output(datasize, stats):
     specialList = ["strong", "powerful", "butter", "salt", "james", "washington", "church"]
     for spl in specialList:
         rank = getIndexOfTuple(sortedList, 0, spl)
-        tokenBF = stats.pageWordHash[spl]
-        tokenPF = stats.bookWordHash[word]
-        tokenP = round(float(tokenBF)/stats.wordCount, 6)
+        tokenPF = stats.pageWordHash[spl]
+        tokenBF = stats.bookWordHash[word]
+        tokenTF = stats.globalWordHash[word]
+        tokenP = round(float(tokenTF)/stats.wordCount, 8)
         tokenPR = tokenP * (rank + 1)
         
-        line = myname + " " + datasize + " " + str(rank+1) + " " + spl + " " + str(tokenBF) + " " + str(tokenPF) + " " + str(tokenP) + " " + str(tokenPR) + "\n"
+        line = myname + " " + datasize + " " + str(rank+1) + " " + spl + " " + str(tokenBF) + " " + str(tokenPF) + " " + str(tokenTF) + " " + str(tokenP) + " " + str(tokenPR) + "\n"
         lines.append(line)
         
     #Page Co-occurence stuff - powerful
@@ -58,7 +60,7 @@ def generate_output(datasize, stats):
     windowList = stats.powerfulWindowHash.most_common(5)
     adjacentList = stats.powerfulAdjacentHash.most_common(5)
     
-    for i in range(0, 4):
+    for i in range(0, len(adjacentList)):
         page = pageList[i][0]
         window = windowList[i][0]
         adjacent = adjacentList[i][0]
@@ -70,7 +72,7 @@ def generate_output(datasize, stats):
     windowList = stats.strongWindowHash.most_common(5)
     adjacentList = stats.strongAdjacentHash.most_common(5)
     
-    for i in range(0, 4):
+    for i in range(0, len(adjacentList)):
         page = pageList[i][0]
         window = windowList[i][0]
         adjacent = adjacentList[i][0]
@@ -82,7 +84,7 @@ def generate_output(datasize, stats):
     windowList = stats.butterWindowHash.most_common(5)
     adjacentList = stats.butterAdjacentHash.most_common(5)
     
-    for i in range(0, 4):
+    for i in range(0, len(adjacentList)):
         page = pageList[i][0]
         window = windowList[i][0]
         adjacent = adjacentList[i][0]
@@ -94,7 +96,7 @@ def generate_output(datasize, stats):
     windowList = stats.saltWindowHash.most_common(5)
     adjacentList = stats.saltAdjacentHash.most_common(5)
     
-    for i in range(0, 4):
+    for i in range(0, len(adjacentList)):
         page = pageList[i][0]
         window = windowList[i][0]
         adjacent = adjacentList[i][0]
@@ -106,7 +108,7 @@ def generate_output(datasize, stats):
     windowList = stats.washingtonWindowHash.most_common(5)
     adjacentList = stats.washingtonAdjacentHash.most_common(5)
     
-    for i in range(0, 4):
+    for i in range(0, len(adjacentList)):
         page = pageList[i][0]
         window = windowList[i][0]
         adjacent = adjacentList[i][0]
@@ -118,7 +120,7 @@ def generate_output(datasize, stats):
     windowList = stats.jamesWindowHash.most_common(5)
     adjacentList = stats.jamesAdjacentHash.most_common(5)
     
-    for i in range(0, 4):
+    for i in range(0, len(adjacentList)):
         page = pageList[i][0]
         window = windowList[i][0]
         adjacent = adjacentList[i][0]
@@ -131,7 +133,7 @@ def generate_output(datasize, stats):
     windowList = stats.churchWindowHash.most_common(5)
     adjacentList = stats.churchAdjacentHash.most_common(5)
     
-    for i in range(0, 4):
+    for i in range(0, len(adjacentList)):
         page = pageList[i][0]
         window = windowList[i][0]
         adjacent = adjacentList[i][0]
