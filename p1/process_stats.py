@@ -157,5 +157,5 @@ def computeExtraStats(datasize, stats):
     
     #Final write
     fp.writelines(lines)
-
+    fp.close()
 

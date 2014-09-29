@@ -29,7 +29,7 @@ def generate_output(datasize, stats):
     #The top 50 things
     sortedList = stats.globalWordHash.most_common()
 
-    for i in range(0, 50):
+    for i in range(0, min(50, len(sortedList))):
         item = sortedList[i]
         word = item[0]
         tokenPF = stats.pageWordHash[word]
@@ -47,8 +47,8 @@ def generate_output(datasize, stats):
     for spl in specialList:
         rank = getIndexOfTuple(sortedList, 0, spl)
         tokenPF = stats.pageWordHash[spl]
-        tokenBF = stats.bookWordHash[word]
-        tokenTF = stats.globalWordHash[word]
+        tokenBF = stats.bookWordHash[spl]
+        tokenTF = stats.globalWordHash[spl]
         tokenP = round(float(tokenTF)/stats.wordCount, 8)
         tokenPR = tokenP * (rank + 1)
         
@@ -80,6 +80,7 @@ def generate_output(datasize, stats):
         lines.append(line)
     
     fp.writelines(lines)
+    fp.close()
 '''
     #Page Co-occurence stuff - butter
     pageList = stats.butterHash.most_common(5)

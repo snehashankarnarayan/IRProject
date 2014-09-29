@@ -29,5 +29,9 @@ if __name__ == "__main__":
         processDirectory(sys.argv[1], bigDirName)
     t2 = time()
     minutes = (t2 - t1)/60.0
+    fp = open("snehas_time_" + sys.argv[1] + ".txt", "w")
+    line = "Time taken in minutes: " + str(minutes)
+    fp.write(line)
+    fp.close()
     print 'Time taken in seconds: %f' %(t2-t1)
     print 'Time taken in minutes: ' + str(minutes)
