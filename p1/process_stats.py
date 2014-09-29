@@ -40,21 +40,21 @@ def addUpStats(statList):
     
         #Special word Hashes - james
         cStats.jamesHash.update(stats.jamesHash)
+        cStats.jamesPrecedingHash.update(stats.jamesPrecedingHash)
         cStats.jamesAdjacentHash.update(stats.jamesAdjacentHash)
         cStats.jamesWindowHash.update(stats.jamesWindowHash)
     
         #Special word Hashes - washington
         cStats.washingtonHash.update(stats.washingtonHash)
+        cStats.washingtonPrecedingHash.update(stats.washingtonPrecedingHash)
         cStats.washingtonAdjacentHash.update(stats.washingtonAdjacentHash)
         cStats.washingtonWindowHash.update(stats.washingtonWindowHash)
     
         #Special word Hashes - church
         cStats.churchHash.update(stats.churchHash)
+        cStats.churchPrecedingHash.update(stats.churchPrecedingHash)
         cStats.churchAdjacentHash.update(stats.churchAdjacentHash)
         cStats.churchWindowHash.update(stats.churchWindowHash)
-    
-  
-    
         
     return cStats
 
@@ -73,31 +73,65 @@ def printStats(stats):
     print "Page count: " + str(stats.pageCount)
     print "Book count: " + str(stats.bookCount)
    
-    print stats.globalWordHash.most_common(50)
-    print "strong"
-    print stats.strongHash.most_common(50)
-    print "strong window"
-    print stats.strongWindowHash.most_common(50)
+def computeExtraStats(stats):
+    fp = open("special_stats.txt", "w")
+    lines = []
 
-    print "strong adjacency"
-    print stats.strongAdjacentHash.most_common(50)
+    #Analyze strong
+    wordlist = stats.strongHash.most_common(10)
     
-    print "powerful adjacency"
-    print stats.powerfulAdjacentHash.most_common(50)
+    for item in wordlist:
+        line = "Strong " + item[0] + " " + str(item[1]) + "\n"
+        lines.append(line)
     
-    print "james adjacency"
-    print stats.jamesAdjacentHash.most_common(50)
+    #Analyze powerful
+    wordlist = stats.powerfulHash.most_common(10)
     
-    print "salt adjacency"
-    print stats.saltAdjacentHash.most_common(50)
+    for item in wordlist:
+        line = "powerful " + item[0] + " " + str(item[1]) + "\n"
+        lines.append(line)
     
-    print "butter adjacency"
-    print stats.butterAdjacentHash.most_common(50)
+    #Analyze salt
+    wordlist = stats.saltHash.most_common(10)
     
-    print "washington adjacency"
-    print stats.washingtonAdjacentHash.most_common(50)
+    for item in wordlist:
+        line = "salt " + item[0] + " " + str(item[1]) + "\n"
+        lines.append(line)
+
+    #Analyze butter
+    wordlist = stats.butterHash.most_common(10)
     
-    print "church adjacency"
-    print stats.churchAdjacentHash.most_common(50)
+    for item in wordlist:
+        line = "butter " + item[0] + " " + str(item[1]) + "\n"
+        lines.append(line)
+
+    #Word adjacency - james
+    wordlist = stats.jamesAdjacentHash.most_common(5)
+    prelist = stats.jamesPrecedentHash.most_common(5)
     
+    for item in wordlist:
+        line = "James " + item[0] + " " + str(item[1]) + "\n"
+        lines.append(line)
+    
+    for item in prelist:
+        line = "James precedence" + item[0] + " " + str(item[1]) + "\n"
+        lines.append(line)
+    
+    #Word adjacency - washington
+    wordlist = stats.washingtonAdjacentHash.most_common(5)
+    
+    for item in wordlist:
+        line = "washington " + item[0] + " " + str(item[1]) + "\n"
+        lines.append(line)
+
+    #Word adjacency - church
+    wordlist = stats.churchAdjacentHash.most_common(5)
+    
+    for item in wordlist:
+        line = "church " + item[0] + " " + str(item[1]) + "\n"
+        lines.append(line)
+    
+    #Final write
+    fp.writelines(lines)
+
 

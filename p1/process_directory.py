@@ -10,10 +10,10 @@ from collections import Counter
 from sets import Set
 from process_book import processFile
 from statMaster import statMaster
-from process_stats import processBulkStats, processFinalStats, printStats
+from process_stats import processBulkStats, processFinalStats, printStats, computeExtraStats
 from generate_output import generate_output
 import time
-from pprint import pprint
+import gc
 
 def getFileList(rootDirName):
     tinyDir =  listdir(rootDirName);
@@ -76,15 +76,19 @@ def processDirectory(datasize, dirName):
             touch(statList)
             statListCount += 1
             del statList[:]
+            gc.collect()
         
     #Do a final sweep and add all the stats to be processed to the list    
     for i in range(0, statListCount):
         statFinalList.append(statListOutQueue.get())
+        if(i % 100):
+            gc.collect()
 
     cleanUpProcesses(fileworkerList, statworkerList)
     
     finalstats = processFinalStats(statFinalList)
-    printStats(finalstats)
+    #printStats(finalstats)
+    computeExtraStats(finalstats)
 
     generate_output(datasize, finalstats)
 

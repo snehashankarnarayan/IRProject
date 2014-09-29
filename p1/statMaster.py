@@ -48,13 +48,16 @@ class statMaster:
         self.saltWindowHash = Counter()
 
         self.jamesHash = Counter()
+        self.jamesPrecedingHash = Counter()
         self.jamesAdjacentHash = Counter()
         self.jamesWindowHash = Counter()
 
         self.washingtonHash = Counter()
+        self.washingtonPrecedingHash = Counter()
         self.washingtonAdjacentHash = Counter()
         self.washingtonWindowHash = Counter()
 
         self.churchHash = Counter()
+        self.churchPrecedingHash = Counter()
         self.churchAdjacentHash = Counter()
         self.churchWindowHash = Counter()

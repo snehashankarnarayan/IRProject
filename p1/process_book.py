@@ -11,11 +11,11 @@ from sets import Set
 from statMaster import statMaster
 from process_page import processPage
 import multiprocessing as mp
-from pprint import pprint
 
 def processFile(workerName, fileQueue, outqueue):
     while True:
         fileName = fileQueue.get()
+        print "Processing: " + fileName
         stats = statMaster()
         stats.bookLength = 0
         stats.bookUniqueLength = 0
@@ -40,5 +40,6 @@ def processFile(workerName, fileQueue, outqueue):
 
         stats.bookLengthList.append(stats.wordCount)
         stats.bookUniqueLengthList.append(stats.bookUniqueLength)
+        print "Done Processing: " + fileName
         outqueue.put(stats)
     
