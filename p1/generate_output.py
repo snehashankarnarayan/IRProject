@@ -78,7 +78,9 @@ def generate_output(datasize, stats):
         adjacent = adjacentList[i][0]
         line = myname + " " + datasize + " strong " + page + " " + window + " " + adjacent + "\n"
         lines.append(line)
-
+    
+    fp.writelines(lines)
+'''
     #Page Co-occurence stuff - butter
     pageList = stats.butterHash.most_common(5)
     windowList = stats.butterWindowHash.most_common(5)
@@ -139,6 +141,5 @@ def generate_output(datasize, stats):
         adjacent = adjacentList[i][0]
         line = myname + " " + datasize + " church " + page + " " + window + " " + adjacent + "\n"
         lines.append(line)
-
+'''
     #Actually write to file
-    fp.writelines(lines)
