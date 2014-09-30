@@ -1,15 +1,17 @@
 #!/usr/bin/python
 
+import traceback
 from collections import Counter
 from sets import Set
 from statMaster import statMaster
 import gc
+from pprint import pprint
 
 def addUpStats(statList):
+    print "Consolidating stats ... " + str(len(statList)) 
     cStats = statMaster()
     counter = 0
     for stats in statList:
-        print "Consolidating stats ... " 
         #Counts
         cStats.wordCount += stats.wordCount
     #    cStats.bookUniqueLength += stats.bookUniqueLength
@@ -61,7 +63,8 @@ def addUpStats(statList):
         
         if(counter%100 == 0):
             gc.collect()
-
+    
+    print "done stat consolidation " +  str(len(statList))
     return cStats
 
 def processBulkStats(workerName, statListInQueue, statListOutQueue):
@@ -71,9 +74,12 @@ def processBulkStats(workerName, statListInQueue, statListOutQueue):
             cumulativeStats = addUpStats(statList)
             statListOutQueue.put(cumulativeStats)
         except:
-            pass
+            print traceback.format_exc()
+            break
 
 def processFinalStats(statList):
+    #fp = open("log.txt","w")
+    #pprint.pprint(statList, fp)
     return addUpStats(statList) 
 
 def printStats(stats):

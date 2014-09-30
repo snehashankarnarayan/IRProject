@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import traceback
 import xml.etree.cElementTree as ET
 import multiprocessing as mp
 from os import listdir
@@ -76,40 +77,51 @@ def processDirectory(datasize, dirName):
     heapworker.start()
 
     for i in range(0, fileCount):
-        queueElement = fileOutQueue.get()
-        statList.append(queueElement)
-        heapL = heapLaw()
-        heapL.bookWordSet = queueElement.bookWordSet
-        heapL.wordCount = queueElement.wordCount
-        heapInQueue.put(heapL)
-        if(len(statList) == 20 or len(statList) == fileCount):
-            statListInQueue.put(statList)
-            touch(statList)
-            statListCount += 1
-            del statList[:] 
-            gc.collect()
-        
+        try:
+            queueElement = fileOutQueue.get(True, 240)
+            statList.append(queueElement)
+            heapL = heapLaw()
+            heapL.bookWordSet = queueElement.bookWordSet
+            heapL.wordCount = queueElement.wordCount
+            heapInQueue.put(heapL)
+            if(len(statList) == 20 or i == fileCount-1):
+                statListInQueue.put(statList)
+                print "element going into statlistinqueue {} {}".format(i, fileCount)
+                touch(statList)
+                statListCount += 1
+                del statList[:] 
+                gc.collect()
+
+        except:
+            print traceback.format_exc()
+            break
+            
+    print "outta loooop"
+    cleanUpProcesses(fileworkerList)
+    print "statListcount {}".format(statListCount) 
     #Do a final sweep and add all the stats to be processed to the list    
     for i in range(0, statListCount):
         try:
             statFinalList.append(statListOutQueue.get(True, 240))
+            print "received statlists {}".format(i)
             if(i % 100 == 0):
                 gc.collect()
         except:
+            print traceback.format_exc()
             break
 
-    cleanUpProcesses(fileworkerList, statworkerList)
-    
+    cleanUpProcesses(statworkerList)
+    print "FINAL STATTTTTSSS"
     finalstats = processFinalStats(statFinalList)
     #printStats(finalstats)
     computeExtraStats(datasize, finalstats)
     generate_output(datasize, finalstats)
     heapworker.terminate()
 
-def cleanUpProcesses(fileworkerList, statworkerList):
+def cleanUpProcesses(fileworkerList):
+    
+    print "cleaning up processes"
+    
     #Terminate all remaining processes
     for i in range(0, len(fileworkerList)):
         fileworkerList[i].terminate()
-
-    for i in range(0, len(statworkerList)):
-        statworkerList[i].terminate()

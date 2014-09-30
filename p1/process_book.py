@@ -1,5 +1,6 @@
 #!/usr/bin/python
 
+import traceback
 import xml.etree.cElementTree as ET
 from os import listdir
 import re
@@ -15,7 +16,7 @@ import multiprocessing as mp
 def processFile(workerName, fileQueue, outqueue):
     while True:
         try:
-            fileName = fileQueue.get(True, 120)
+            fileName = fileQueue.get(True, 240)
             #print "Processing: " + fileName
             stats = statMaster()
             stats.bookLength = 0
@@ -44,5 +45,6 @@ def processFile(workerName, fileQueue, outqueue):
             print "Done Processing: " + fileName 
             outqueue.put(stats)
         except:
-            pass
+            print traceback.format_exc()
+            break
     
