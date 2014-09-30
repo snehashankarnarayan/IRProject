@@ -15,7 +15,7 @@ import multiprocessing as mp
 def processFile(workerName, fileQueue, outqueue):
     while True:
         fileName = fileQueue.get()
-        print "Processing: " + fileName
+        #print "Processing: " + fileName
         stats = statMaster()
         stats.bookLength = 0
         stats.bookUniqueLength = 0
