@@ -3,9 +3,11 @@
 from collections import Counter
 from sets import Set
 from statMaster import statMaster
+import gc
 
 def addUpStats(statList):
     cStats = statMaster()
+    counter = 0
     for stats in statList:
         print "Consolidating stats ... " 
         #Counts
@@ -57,6 +59,9 @@ def addUpStats(statList):
         cStats.churchAdjacentHash.update(stats.churchAdjacentHash)
         cStats.churchWindowHash.update(stats.churchWindowHash)
         
+        if(counter%100 == 0):
+            gc.collect()
+
     return cStats
 
 def processBulkStats(workerName, statListInQueue, statListOutQueue):
@@ -89,7 +94,7 @@ def printStats(stats):
     print stats.jamesHash.most_common(50)
    
 def computeExtraStats(datasize, stats):
-    fp = open("special_stat_s" + datasize + ".txt", "w")
+    fp = open("output/special_stats_" + datasize + ".txt", "w")
     lines = []
 
     #Analyze strong

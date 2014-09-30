@@ -10,7 +10,7 @@ def getIndexOfTuple(tList, wordindex, value):
             return pos
 
 def generate_output(datasize, stats):
-    outputFileName = "snehas_" + datasize + ".txt"
+    outputFileName = "output/snehas_" + datasize + ".txt"
     fp = open(outputFileName, "w")
     
     #Output lines

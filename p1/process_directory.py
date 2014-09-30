@@ -14,6 +14,8 @@ from process_stats import processBulkStats, processFinalStats, printStats, compu
 from generate_output import generate_output
 import time
 import gc
+from heapLaw import heapLaw
+from process_heap_law import processHeapLaw, outputHeapLawData
 
 def getFileList(rootDirName):
     tinyDir =  listdir(rootDirName);
@@ -43,13 +45,13 @@ def processDirectory(datasize, dirName):
     statFinalList = []
     
     #Some counts
-    if(fileCount < 20):
+    if(fileCount < 4):
         fileWorkerThreadCount = fileCount
     else:
-        fileWorkerThreadCount = 20
+        fileWorkerThreadCount = 4
 
-    if(fileCount/20 < 10):
-        statWorkerThreadCount = fileCount/20 + 1
+    if(fileCount/4 < 10):
+        statWorkerThreadCount = fileCount/4 + 1
     else:
         statWorkerThreadCount = 10
 
@@ -70,18 +72,21 @@ def processDirectory(datasize, dirName):
         statworkerList.append(statworker)
 
     #Deal with heaplaw
-    heapworker = mp.Process(target = processHeapLaw, args = ("heapworker", heapInQueue, )
+    heapworker = mp.Process(target = processHeapLaw, args = ("heapworker", heapInQueue, fileCount, datasize, ))
     heapworker.start()
 
     for i in range(0, fileCount):
         queueElement = fileOutQueue.get()
         statList.append(queueElement)
-        heapInQueue.put(queueElement.bookWordSet, queueElement.wordCount)
+        heapL = heapLaw()
+        heapL.bookWordSet = queueElement.bookWordSet
+        heapL.wordCount = queueElement.wordCount
+        heapInQueue.put(heapL)
         if(len(statList) == 20 or len(statList) == fileCount):
             statListInQueue.put(statList)
             touch(statList)
             statListCount += 1
-            del statList[:]
+            del statList[:] 
             gc.collect()
         
     #Do a final sweep and add all the stats to be processed to the list    
@@ -91,13 +96,11 @@ def processDirectory(datasize, dirName):
             gc.collect()
 
     cleanUpProcesses(fileworkerList, statworkerList)
-    heapworker.terminate()
-
+    
     finalstats = processFinalStats(statFinalList)
     #printStats(finalstats)
     computeExtraStats(datasize, finalstats)
-
-    generate_output(datasize, finalstats)
+    heapworker.terminate()
 
 def cleanUpProcesses(fileworkerList, statworkerList):
     #Terminate all remaining processes
