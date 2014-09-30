@@ -6,8 +6,8 @@ Strong into 50
 Strong would 48
 Strong what 45
 Strong being 44
+Strong other 44
 Strong upon 44
-Strong these 44
 powerful one 46
 powerful what 43
 powerful other 42
@@ -43,26 +43,26 @@ James ii 2
 James watt 2
 James mackintosh 2
 James sully 1
-James precedencesir 3
-James precedencemr 3
-James precedenceadded 1
-James precedenceubiquitous 1
-James precedencev 1
+James precedence sir 3
+James precedence mr 3
+James precedence added 1
+James precedence ubiquitous 1
+James precedence v 1
 washington city 2
 washington advising 1
 washington thomson 1
 washington didn 1
 washington where 1
-washington precedencegeorge 3
-washington precedencemount 1
-washington precedencefranklin 1
+washington precedence george 3
+washington precedence mount 1
+washington precedence franklin 1
 church lands 2
 church pro 1
 church henry 1
 church influence 1
 church stile 1
-church precedencepresbyterian 2
-church precedencemission 2
-church precedencecatholic 1
-church precedence00 1
-church precedenceromish 1
+church precedence presbyterian 2
+church precedence mission 2
+church precedence catholic 1
+church precedence 00 1
+church precedence romish 1
