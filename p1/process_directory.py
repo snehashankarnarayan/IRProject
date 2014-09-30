@@ -96,7 +96,6 @@ def processDirectory(datasize, dirName):
             print traceback.format_exc()
             break
             
-    print "outta loooop"
     cleanUpProcesses(fileworkerList)
     print "statListcount {}".format(statListCount) 
     #Do a final sweep and add all the stats to be processed to the list    
@@ -111,7 +110,7 @@ def processDirectory(datasize, dirName):
             break
 
     cleanUpProcesses(statworkerList)
-    print "FINAL STATTTTTSSS"
+    print "FINAL STATS COMPILATION"
     finalstats = processFinalStats(statFinalList)
     #printStats(finalstats)
     computeExtraStats(datasize, finalstats)

@@ -1,120 +1,252 @@
-Strong one 38552
-Strong more 31058
-Strong into 29913
-Strong great 28826
-Strong other 28802
-Strong some 28695
-Strong time 28057
-Strong these 27571
-Strong than 27530
-Strong made 27204
-Strong would 26566
-Strong only 26186
-Strong upon 26169
-Strong if 26132
-Strong two 26091
-powerful one 15507
-powerful more 13923
-powerful great 13233
-powerful into 12600
-powerful other 12565
-powerful these 12391
-powerful than 12175
-powerful most 12078
-powerful time 11812
-powerful some 11519
-powerful only 11432
-powerful made 10949
-powerful first 10725
-powerful upon 10608
-powerful would 10510
-salt one 6659
-salt into 5862
-salt other 5770
-salt some 5534
-salt these 5183
-salt more 5067
-salt two 4961
-salt great 4882
-salt may 4881
-salt very 4630
-salt than 4570
-salt about 4513
-salt only 4503
-salt water 4485
-salt also 4424
-butter one 1751
-butter some 1537
-butter other 1494
-butter into 1472
-butter more 1388
-butter two 1316
-butter great 1315
-butter than 1302
-butter very 1283
-butter about 1254
-butter these 1253
-butter only 1218
-butter made 1206
-butter time 1191
-butter most 1167
-James ii 3286
-James h 2409
-James river 2380
-James m 2144
-James w 1953
-James madison 1862
-James b 1561
-James do 1423
-James c 1242
-James monroe 1241
-James precedence sir 4788
-James precedence king 3042
-James precedence st 3038
-James precedence mr 1816
-James precedence rev 1733
-James precedence col 967
-James precedence capt 801
-James precedence hon 796
-James precedence gen 667
-James precedence dr 661
-washington d 10385
-washington george 2655
-washington city 1262
-washington dc 828
-washington county 764
-washington irving 583
+Page hash
+Strong one 39333
+Strong more 31650
+Strong into 30524
+Strong other 29334
+Strong great 29328
+Strong some 29259
+Strong time 28694
+Strong these 28072
+Strong than 28067
+Strong made 27847
+Strong would 27125
+Strong upon 26744
+Strong only 26735
+Strong two 26597
+Strong if 26531
+window hash
+Strong very 3770
+Strong one 3111
+Strong enough 2515
+Strong too 2358
+Strong force 2226
+Strong will 2220
+Strong her 2171
+Strong made 2158
+Strong men 2148
+Strong position 2089
+Strong against 2084
+Strong upon 2048
+Strong man 2019
+Strong if 2006
+Strong would 1984
+Adjacent hash
+Strong enough 2522
+Strong position 1344
+Strong force 1013
+Strong man 585
+Strong hand 492
+Strong desire 422
+Strong hold 421
+Strong men 413
+Strong drink 396
+Strong feeling 381
+Strong one 330
+Strong line 312
+Strong body 291
+Strong party 290
+Strong current 288
+Page hash
+powerful one 15900
+powerful more 14308
+powerful great 13573
+powerful into 12965
+powerful other 12864
+powerful these 12720
+powerful than 12492
+powerful most 12422
+powerful time 12124
+powerful some 11830
+powerful only 11667
+powerful made 11227
+powerful first 10943
+powerful would 10856
+powerful upon 10847
+window hash
+powerful most 3457
+powerful more 2626
+powerful one 1347
+powerful than 1291
+powerful great 1187
+powerful very 1140
+powerful these 897
+powerful influence 882
+powerful her 849
+powerful would 810
+powerful against 775
+powerful into 763
+powerful some 756
+powerful upon 747
+powerful will 724
+adjacen hash
+powerful than 597
+powerful influence 538
+powerful army 337
+powerful enough 257
+powerful fleet 202
+powerful nation 199
+powerful effect 180
+powerful man 160
+powerful force 154
+powerful party 152
+powerful nations 135
+powerful king 128
+powerful tribe 124
+powerful telescopes 123
+powerful enemy 112
+Page hash
+salt one 6611
+salt into 5783
+salt other 5672
+salt some 5465
+salt these 5075
+salt more 5005
+salt two 4868
+salt great 4853
+salt may 4732
+salt very 4520
+salt than 4476
+salt about 4444
+salt only 4435
+salt water 4383
+salt made 4326
+window hash
+salt water 2122
+salt lake 1134
+salt solution 930
+salt 2 686
+salt into 676
+salt sea 673
+salt common 644
+salt great 606
+salt one 583
+salt some 566
+salt other 552
+salt acid 529
+salt city 479
+salt fresh 474
+salt if 467
+adjacen hash
+salt lake 1095
+salt water 840
+salt solution 317
+salt sea 233
+salt works 179
+salt springs 165
+salt fish 139
+salt river 131
+salt meat 124
+salt marshes 120
+salt pork 116
+salt marsh 114
+salt lakes 108
+salt beef 69
+salt pond 57
+Page hash
+butter one 1808
+butter some 1566
+butter other 1547
+butter into 1484
+butter more 1420
+butter great 1352
+butter two 1334
+butter than 1326
+butter very 1319
+butter these 1284
+butter about 1282
+butter made 1254
+butter only 1234
+butter time 1207
+butter most 1178
+window hash
+butter cheese 521
+butter milk 425
+butter bread 331
+butter per 302
+butter eggs 233
+butter c 167
+butter other 161
+butter cream 151
+butter beef 147
+butter made 142
+butter os 137
+butter fat 129
+butter ib 128
+butter fresh 127
+butter some 127
+adjacent hash
+butter cheese 150
+butter per 90
+butter worth 67
+butter flies 64
+butter eggs 46
+butter fat 45
+butter beef 41
+butter made 38
+butter milk 33
+butter fly 29
+butter field 24
+butter maker 22
+butter making 21
+butter cross 18
+butter nor 16
+James ii 3553
+James h 2483
+James river 2451
+James m 2193
+James w 1976
+James madison 1897
+James b 1608
+James do 1426
+James c 1289
+James monroe 1281
+James precedence sir 4964
+James precedence king 3199
+James precedence st 3144
+James precedence rev 1963
+James precedence mr 1931
+James precedence col 1094
+James precedence capt 890
+James precedence hon 811
+James precedence gen 674
+James precedence dr 673
+washington d 10396
+washington george 2674
+washington city 1252
+washington dc 1049
+washington county 794
+washington irving 593
 washington july 521
-washington territory 402
-washington june 398
-washington where 379
-washington precedence george 2952
-washington precedence general 2393
+washington june 402
+washington college 397
+washington where 378
+washington precedence george 3040
+washington precedence general 2477
 washington precedence 0 2155
-washington precedence 1779 1265
-washington precedence 65 1004
+washington precedence 1779 1266
+washington precedence 65 1006
 washington precedence 1780 922
-washington precedence fort 860
-washington precedence near 664
-washington precedence gen 663
-washington precedence president 626
-church dedicated 1902
-church history 1144
-church music 854
-church where 814
-church oxford 717
-church government 649
-church st 627
-church property 610
-church should 588
-church new 582
-church precedence catholic 5365
-church precedence parish 3883
-church precedence presbyterian 3386
-church precedence christian 3320
-church precedence episcopal 3247
-church precedence christ 2590
-church precedence roman 2163
-church precedence english 1726
-church precedence old 1508
-church precedence established 1447
+washington precedence fort 858
+washington precedence gen 677
+washington precedence near 668
+washington precedence president 657
+church dedicated 1913
+church history 1151
+church music 868
+church where 856
+church new 782
+church oxford 725
+church st 701
+church government 667
+church should 606
+church property 597
+church precedence catholic 5597
+church precedence parish 4107
+church precedence presbyterian 3499
+church precedence christian 3372
+church precedence episcopal 3341
+church precedence christ 3046
+church precedence roman 2215
+church precedence english 1747
+church precedence old 1604
+church precedence established 1499

@@ -1,70 +1,240 @@
-Strong one 880
-Strong into 691
-Strong more 653
-Strong some 651
-Strong great 638
-Strong other 635
-Strong two 614
-Strong very 607
-Strong only 605
-Strong time 586
-powerful one 361
-powerful more 323
-powerful great 298
-powerful only 289
-powerful than 287
-powerful these 283
-powerful most 281
-powerful into 275
-powerful some 273
-powerful other 255
-salt one 283
-salt two 265
-salt other 263
-salt into 254
-salt about 252
-salt some 251
-salt great 244
-salt very 237
-salt m 237
-salt n 230
-butter one 105
-butter two 96
-butter about 96
-butter some 92
-butter m 88
-butter other 88
-butter small 87
-butter into 87
-butter n 85
-butter e 84
-James w 39
-James c 34
-James island 34
-James river 32
-James l 32
-James precedencesir 81
-James precedencemr 66
-James precedencecol 57
-James precedencest 32
-James precedenceking 27
-washington d 97
-washington city 29
-washington himself 11
-washington where 10
-washington irving 10
-washington precedencenear 43
-washington precedenceirving 28
-washington precedencethrough 26
-washington precedencesaid 16
-washington precedenceupon 16
+Page hashStrong one 1804
+Strong into 1438
+Strong more 1357
+Strong some 1316
+Strong great 1251
+Strong time 1244
+Strong would 1242
+Strong other 1241
+Strong only 1235
+Strong made 1235
+Strong two 1195
+Strong than 1187
+Strong if 1181
+Strong upon 1164
+Strong very 1159
+window hashStrong force 163
+Strong very 149
+Strong one 141
+Strong her 141
+Strong line 141
+Strong enemy 123
+Strong position 115
+Strong men 111
+Strong enough 111
+Strong two 102
+Strong my 101
+Strong made 101
+Strong up 99
+Strong would 99
+Strong our 99
+Adjacent hashStrong enough 108
+Strong position 65
+Strong force 62
+Strong castle 55
+Strong line 49
+Strong man 31
+Strong skirmish 25
+Strong men 23
+Strong current 19
+Strong desire 19
+Strong body 15
+Strong impression 14
+Strong arm 14
+Strong works 14
+Strong hold 13
+Page hashpowerful one 702
+powerful more 586
+powerful great 561
+powerful into 549
+powerful than 532
+powerful most 521
+powerful these 510
+powerful other 500
+powerful only 500
+powerful time 500
+powerful some 492
+powerful would 487
+powerful if 466
+powerful first 465
+powerful such 457
+window hashpowerful most 157
+powerful more 107
+powerful one 76
+powerful great 59
+powerful her 58
+powerful than 57
+powerful into 45
+powerful would 42
+powerful made 40
+powerful influence 39
+powerful these 37
+powerful upon 35
+powerful very 35
+powerful some 34
+powerful my 31
+adjacen hashpowerful influence 23
+powerful army 22
+powerful than 22
+powerful enough 16
+powerful charms 10
+powerful telescope 10
+powerful battery 9
+powerful baron 8
+powerful mind 8
+powerful one 8
+powerful support 8
+powerful auxiliary 8
+powerful enemy 7
+powerful state 7
+powerful appeal 7
+Page hashsalt one 426
+salt into 359
+salt other 359
+salt some 351
+salt two 345
+salt very 344
+salt great 331
+salt about 329
+salt only 326
+salt more 298
+salt being 292
+salt most 286
+salt these 285
+salt also 284
+salt many 281
+window hashsalt lake 165
+salt water 112
+salt do 51
+salt city 50
+salt fish 46
+salt great 43
+salt will 42
+salt sugar 41
+salt one 41
+salt trade 35
+salt pop 35
+salt rations 34
+salt some 34
+salt sea 33
+salt c 31
+adjacen hashsalt lake 170
+salt water 39
+salt meat 25
+salt fish 23
+salt mines 14
+salt river 13
+salt springs 12
+salt marshes 10
+salt sea 9
+salt do 8
+salt refineries 7
+salt lakes 7
+salt obtained 6
+salt pop 6
+salt provisions 6
+Page hashbutter one 136
+butter two 117
+butter some 116
+butter into 111
+butter about 107
+butter other 103
+butter more 101
+butter very 99
+butter great 98
+butter being 97
+butter well 97
+butter small 96
+butter here 96
+butter old 94
+butter large 93
+window hashbutter cheese 35
+butter trade 30
+butter cattle 22
+butter corn 21
+butter per 18
+butter considerable 17
+butter bread 16
+butter also 15
+butter some 15
+butter pop 14
+butter ib 13
+butter c 12
+butter milk 12
+butter eggs 11
+butter church 10
+adjacent hashbutter cheese 15
+butter worth 10
+butter per 10
+butter beef 5
+butter pop 4
+butter field 4
+butter made 3
+butter one 2
+butter produced 2
+butter milk 2
+butter flax 2
+butter will 2
+butter melted 2
+butter pork 2
+butter large 2
+James ii 209
+James river 68
+James h 67
+James w 66
+James m 59
+James l 54
+James c 50
+James vi 46
+James e 43
+James d 42
+James precedence col 173
+James precedence sir 124
+James precedence capt 88
+James precedence mr 83
+James precedence king 61
+James precedence st 53
+James precedence lieutcol 52
+James precedence maj 37
+James precedence gen 35
+James precedence lieut 27
+washington d 185
+washington city 37
+washington union 22
+washington where 19
+washington irving 17
+washington may 15
+washington county 14
+washington artillery 13
+washington himself 12
+washington district 11
+washington precedence near 48
+washington precedence george 36
+washington precedence irving 29
+washington precedence through 28
+washington precedence upon 21
+washington precedence fort 20
+washington precedence mr 18
+washington precedence said 17
+washington precedence left 13
+washington precedence reached 13
 church pop 172
 church townhouse 85
-church two 69
+church two 72
 church chapel 48
+church property 46
 church manufactures 39
-church precedenceparish 1105
-church precedencecatholic 268
-church precedencehandsome 93
-church precedenceprotestant 87
-church precedencegreek 55
+church built 37
+church several 36
+church three 34
+church p 30
+church precedence parish 1120
+church precedence catholic 362
+church precedence english 142
+church precedence episcopal 115
+church precedence protestant 104
+church precedence christian 93
+church precedence handsome 93
+church precedence roman 88
+church precedence presbyterian 77
+church precedence established 72

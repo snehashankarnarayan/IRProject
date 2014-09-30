@@ -107,28 +107,100 @@ def computeExtraStats(datasize, stats):
     lines = []
 
     #Analyze strong
+    line = "Page hash\n"
+    lines.append(line)
     wordlist = stats.strongHash.most_common(15)
     
     for item in wordlist:
         line = "Strong " + item[0] + " " + str(item[1]) + "\n"
         lines.append(line)
     
+    line = "window hash\n"
+    lines.append(line)
+    wordlist = stats.strongWindowHash.most_common(15)
+    
+    for item in wordlist:
+        line = "Strong " + item[0] + " " + str(item[1]) + "\n"
+        lines.append(line)
+    
+    line = "Adjacent hash\n"
+    lines.append(line)
+    wordlist = stats.strongAdjacentHash.most_common(15)
+    
+    for item in wordlist:
+        line = "Strong " + item[0] + " " + str(item[1]) + "\n"
+        lines.append(line)
+    
     #Analyze powerful
+    line = "Page hash\n"
+    lines.append(line)
     wordlist = stats.powerfulHash.most_common(15)
     
     for item in wordlist:
         line = "powerful " + item[0] + " " + str(item[1]) + "\n"
         lines.append(line)
     
+    line = "window hash\n"
+    lines.append(line)
+    wordlist = stats.powerfulWindowHash.most_common(15)
+    
+    for item in wordlist:
+        line = "powerful " + item[0] + " " + str(item[1]) + "\n"
+        lines.append(line)
+    
+    line = "adjacen hash\n"
+    lines.append(line)
+    wordlist = stats.powerfulAdjacentHash.most_common(15)
+    
+    for item in wordlist:
+        line = "powerful " + item[0] + " " + str(item[1]) + "\n"
+        lines.append(line)
+    
     #Analyze salt
+    line = "Page hash\n"
+    lines.append(line)
     wordlist = stats.saltHash.most_common(15)
     
     for item in wordlist:
         line = "salt " + item[0] + " " + str(item[1]) + "\n"
         lines.append(line)
 
+    line = "window hash\n"
+    lines.append(line)
+    wordlist = stats.saltWindowHash.most_common(15)
+    
+    for item in wordlist:
+        line = "salt " + item[0] + " " + str(item[1]) + "\n"
+        lines.append(line)
+
+    line = "adjacen hash\n"
+    lines.append(line)
+    wordlist = stats.saltAdjacentHash.most_common(15)
+    
+    for item in wordlist:
+        line = "salt " + item[0] + " " + str(item[1]) + "\n"
+        lines.append(line)
+
     #Analyze butter
+    line = "Page hash\n"
+    lines.append(line)
     wordlist = stats.butterHash.most_common(15)
+    
+    for item in wordlist:
+        line = "butter " + item[0] + " " + str(item[1]) + "\n"
+        lines.append(line)
+
+    line = "window hash\n"
+    lines.append(line)
+    wordlist = stats.butterWindowHash.most_common(15)
+    
+    for item in wordlist:
+        line = "butter " + item[0] + " " + str(item[1]) + "\n"
+        lines.append(line)
+
+    line = "adjacent hash\n"
+    lines.append(line)
+    wordlist = stats.butterAdjacentHash.most_common(15)
     
     for item in wordlist:
         line = "butter " + item[0] + " " + str(item[1]) + "\n"
@@ -173,4 +245,19 @@ def computeExtraStats(datasize, stats):
     #Final write
     fp.writelines(lines)
     fp.close()
+
+    #Graphing zipfs
+    ofp = open("output/snehas_zipfs_" + datasize + ".txt", "w")
+    wordlist = stats.globalWordHash.most_common(10000)
+
+    dlines = []
+    counter = 1
+    for item in wordlist:
+        line = "(" + str(counter) + "," + str(item[1]) + ")\n"
+        dlines.append(line)
+        counter += 1
+
+    ofp.writelines(dlines)
+    ofp.close()
+
 

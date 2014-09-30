@@ -164,7 +164,7 @@ def checkExistenceAndPrecedence(stats, existenceMap, key, word, PrecedingWord):
     value = False
     if(key == word):
         value = True
-        existenceMap[key] = value
+        existenceMap[key] = True
    
     if(value == True and PrecedingWord != None):
         if(key == "james" and PrecedingWord not in stopwords):
@@ -289,7 +289,7 @@ def processPage(workername, stats):
 
     #Unique words in Page specific processing
     wordSet = set(cleanedwords)
-
+    
     for word in wordSet:
         word = word.translate(None, string.punctuation)
        

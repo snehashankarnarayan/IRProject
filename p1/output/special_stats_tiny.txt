@@ -1,3 +1,4 @@
+Page hash
 Strong if 53
 Strong one 52
 Strong only 51
@@ -8,6 +9,44 @@ Strong what 45
 Strong being 44
 Strong other 44
 Strong upon 44
+Strong these 44
+Strong some 43
+Strong such 43
+Strong two 43
+Strong very 43
+window hash
+Strong her 12
+Strong very 9
+Strong one 9
+Strong she 9
+Strong would 7
+Strong french 7
+Strong can 7
+Strong could 7
+Strong other 7
+Strong some 6
+Strong made 6
+Strong force 5
+Strong what 5
+Strong army 5
+Strong more 5
+Adjacent hash
+Strong enough 4
+Strong hand 3
+Strong position 3
+Strong tincture 2
+Strong magnetic 2
+Strong one 2
+Strong light 2
+Strong affinity 2
+Strong redoubt 2
+Strong glass 2
+Strong places 2
+Strong reinforcement 2
+Strong man 2
+Strong emotion 1
+Strong summer 1
+Page hash
 powerful one 46
 powerful what 43
 powerful other 42
@@ -18,6 +57,44 @@ powerful more 34
 powerful such 33
 powerful two 33
 powerful how 32
+powerful being 32
+powerful power 32
+powerful these 32
+powerful through 31
+powerful only 30
+window hash
+powerful battery 14
+powerful more 12
+powerful through 11
+powerful one 11
+powerful most 10
+powerful what 8
+powerful will 7
+powerful made 7
+powerful called 6
+powerful agent 6
+powerful may 6
+powerful effects 6
+powerful magnet 6
+powerful these 6
+powerful positive 5
+adjacen hash
+powerful battery 9
+powerful agent 5
+powerful telescope 5
+powerful currents 3
+powerful one 2
+powerful machine 2
+powerful current 2
+powerful electromagnets 2
+powerful enough 2
+powerful effects 2
+powerful natural 2
+powerful according 2
+powerful magnet 2
+powerful chemical 2
+powerful impression 1
+Page hash
 salt other 8
 salt than 7
 salt into 7
@@ -28,6 +105,37 @@ salt water 6
 salt one 6
 salt only 6
 salt these 6
+salt what 5
+salt more 5
+salt some 5
+salt form 5
+salt those 5
+window hash
+salt water 8
+salt sugar 6
+salt how 4
+salt will 4
+salt into 3
+salt than 3
+salt hot 3
+salt neutral 3
+salt without 3
+salt cold 2
+salt greater 2
+salt molten 2
+salt solution 2
+salt overflowing 2
+salt fish 2
+adjacen hash
+salt colored 1
+salt may 1
+salt bath 1
+salt water 1
+salt tnd 1
+salt marshes 1
+salt baths 1
+salt than 1
+Page hash
 butter into 5
 butter substances 4
 butter liquid 4
@@ -38,21 +146,58 @@ butter generally 4
 butter under 3
 butter account 3
 butter acid 3
+butter even 3
+butter what 3
+butter body 3
+butter degree 3
+butter water 3
+window hash
+butter solids 5
+butter fermentation 5
+butter butyric 3
+butter cheese 2
+butter some 2
+butter acid 2
+butter generally 2
+butter lactic 2
+butter milk 2
+butter wax 2
+butter heat 2
+butter such 2
+butter encloses 1
+butter melts 1
+butter aeriform 1
+adjacent hash
+butter cheese 1
+butter require 1
+butter putty 1
 James bowers 3
 James ii 2
 James watt 2
 James mackintosh 2
 James sully 1
+James himself 1
+James de 1
+James fancying 1
+James murray 1
+James horn 1
 James precedence sir 3
 James precedence mr 3
 James precedence added 1
 James precedence ubiquitous 1
 James precedence v 1
+James precedence briggen 1
+James precedence moment 1
+James precedence said 1
+James precedence 1591 1
+James precedence come 1
 washington city 2
 washington advising 1
 washington thomson 1
 washington didn 1
 washington where 1
+washington war 1
+washington entitled 1
 washington precedence george 3
 washington precedence mount 1
 washington precedence franklin 1
@@ -61,8 +206,18 @@ church pro 1
 church henry 1
 church influence 1
 church stile 1
+church london 1
+church proclivities 1
+church andcroum 1
+church iii 1
+church missionary 1
 church precedence presbyterian 2
 church precedence mission 2
 church precedence catholic 1
 church precedence 00 1
 church precedence romish 1
+church precedence pauls 1
+church precedence herbert 1
+church precedence alien 1
+church precedence held 1
+church precedence every 1
