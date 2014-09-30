@@ -52,12 +52,12 @@ snehas tiny 48 if 10 964 1586 0.00209463 0.10054224
 snehas tiny 49 will 10 787 1555 0.00205368 0.10063032
 snehas tiny 50 would 10 841 1535 0.00202727 0.1013635
 snehas tiny 551 strong 9 124 139 0.00018358 0.10115258
-snehas tiny 758 powerful 9 82 100 0.00013207 0.10010906
-snehas tiny 8193 butter 2 5 7 9.24e-06 0.07570332
-snehas tiny 3505 salt 5 12 21 2.773e-05 0.09719365
+snehas tiny 757 powerful 9 82 100 0.00013207 0.09997699
+snehas tiny 8186 butter 2 5 7 9.24e-06 0.07563864
+snehas tiny 3503 salt 5 12 21 2.773e-05 0.09713819
 snehas tiny 1791 james 6 31 44 5.811e-05 0.10407501
-snehas tiny 4157 washington 5 15 17 2.245e-05 0.09332465
-snehas tiny 2198 church 8 32 35 4.622e-05 0.10159156
+snehas tiny 4162 washington 5 15 17 2.245e-05 0.0934369
+snehas tiny 2197 church 8 32 35 4.622e-05 0.10154534
 snehas tiny powerful one battery battery
 snehas tiny powerful what more agent
 snehas tiny powerful other through telescope

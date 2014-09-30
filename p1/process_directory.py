@@ -100,6 +100,7 @@ def processDirectory(datasize, dirName):
     finalstats = processFinalStats(statFinalList)
     #printStats(finalstats)
     computeExtraStats(datasize, finalstats)
+    generate_output(datasize, finalstats)
     heapworker.terminate()
 
 def cleanUpProcesses(fileworkerList, statworkerList):
