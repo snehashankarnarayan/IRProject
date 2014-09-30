@@ -1,70 +1,120 @@
-Strong one 38912
-Strong more 31248
-Strong into 30235
-Strong great 29092
-Strong other 29064
-Strong some 28930
-Strong time 28344
-Strong these 27745
-Strong than 27707
-Strong made 27536
-powerful one 15657
-powerful more 13953
-powerful great 13253
-powerful into 12722
-powerful other 12609
-powerful these 12444
-powerful than 12178
-powerful most 12076
-powerful time 11899
-powerful some 11627
-salt one 6650
-salt into 5860
-salt other 5748
-salt some 5567
-salt these 5203
-salt more 5075
-salt two 4923
-salt great 4869
-salt may 4835
-salt very 4612
-butter one 1825
-butter some 1580
-butter other 1567
-butter into 1520
-butter more 1437
-butter great 1347
-butter two 1346
-butter very 1340
-butter than 1330
-butter about 1318
-James ii 3346
-James river 2504
-James h 2162
-James m 2018
-James madison 1837
-James precedence sir 4918
-James precedence king 3143
-James precedence st 2943
-James precedence rev 1925
-James precedence mr 1889
-washington d 9823
-washington george 2665
-washington city 1172
-washington dc 1041
-washington county 805
-washington precedence george 2973
-washington precedence general 2397
+Strong one 38552
+Strong more 31058
+Strong into 29913
+Strong great 28826
+Strong other 28802
+Strong some 28695
+Strong time 28057
+Strong these 27571
+Strong than 27530
+Strong made 27204
+Strong would 26566
+Strong only 26186
+Strong upon 26169
+Strong if 26132
+Strong two 26091
+powerful one 15507
+powerful more 13923
+powerful great 13233
+powerful into 12600
+powerful other 12565
+powerful these 12391
+powerful than 12175
+powerful most 12078
+powerful time 11812
+powerful some 11519
+powerful only 11432
+powerful made 10949
+powerful first 10725
+powerful upon 10608
+powerful would 10510
+salt one 6659
+salt into 5862
+salt other 5770
+salt some 5534
+salt these 5183
+salt more 5067
+salt two 4961
+salt great 4882
+salt may 4881
+salt very 4630
+salt than 4570
+salt about 4513
+salt only 4503
+salt water 4485
+salt also 4424
+butter one 1751
+butter some 1537
+butter other 1494
+butter into 1472
+butter more 1388
+butter two 1316
+butter great 1315
+butter than 1302
+butter very 1283
+butter about 1254
+butter these 1253
+butter only 1218
+butter made 1206
+butter time 1191
+butter most 1167
+James ii 3286
+James h 2409
+James river 2380
+James m 2144
+James w 1953
+James madison 1862
+James b 1561
+James do 1423
+James c 1242
+James monroe 1241
+James precedence sir 4788
+James precedence king 3042
+James precedence st 3038
+James precedence mr 1816
+James precedence rev 1733
+James precedence col 967
+James precedence capt 801
+James precedence hon 796
+James precedence gen 667
+James precedence dr 661
+washington d 10385
+washington george 2655
+washington city 1262
+washington dc 828
+washington county 764
+washington irving 583
+washington july 521
+washington territory 402
+washington june 398
+washington where 379
+washington precedence george 2952
+washington precedence general 2393
 washington precedence 0 2155
 washington precedence 1779 1265
-washington precedence 65 1005
-church history 1124
-church dedicated 946
-church where 857
-church new 769
-church music 745
-church precedence catholic 5198
-church precedence parish 3812
-church precedence presbyterian 3322
-church precedence christ 3307
-church precedence christian 3297
+washington precedence 65 1004
+washington precedence 1780 922
+washington precedence fort 860
+washington precedence near 664
+washington precedence gen 663
+washington precedence president 626
+church dedicated 1902
+church history 1144
+church music 854
+church where 814
+church oxford 717
+church government 649
+church st 627
+church property 610
+church should 588
+church new 582
+church precedence catholic 5365
+church precedence parish 3883
+church precedence presbyterian 3386
+church precedence christian 3320
+church precedence episcopal 3247
+church precedence christ 2590
+church precedence roman 2163
+church precedence english 1726
+church precedence old 1508
+church precedence established 1447

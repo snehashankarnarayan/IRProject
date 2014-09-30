@@ -4,6 +4,7 @@ from collections import Counter
 from sets import Set
 from statMaster import statMaster
 from heapLaw import heapLaw
+import traceback
 
 class point:
     def __init__(self):
@@ -11,6 +12,7 @@ class point:
         self.wordCount = 0
 
 def outputHeapLawData(heapLawList, datasize):
+    print "Outputting heap"
     fp = open("output/snehas_heapLaw_" + datasize + ".txt","w")
     lines = []
     for item in heapLawList:
@@ -24,18 +26,23 @@ def processHeapLaw(workerName, inQueue, fileCount, datasize):
     heapLawList = []
     currentTokenSet = Set()
     for i in range(0, fileCount):
-        heapL = inQueue.get()
-        currentTokenSet.update(heapL.bookWordSet)
+        try:
+            print "processing heap: " + str(i) 
+            heapL = inQueue.get(True, 240)
+            currentTokenSet.update(heapL.bookWordSet)
         
-        pt = point()
-        pt.uniqueTokenCount = len(currentTokenSet)
+            pt = point()
+            pt.uniqueTokenCount = len(currentTokenSet)
         
-        currentLen = len(heapLawList) - 1
-        if(currentLen >= 0):
-            pt.wordCount = heapLawList[currentLen].wordCount + heapL.wordCount
-        else:
-            pt.wordCount = heapL.wordCount
+            currentLen = len(heapLawList) - 1
+            if(currentLen >= 0):
+                pt.wordCount = heapLawList[currentLen].wordCount + heapL.wordCount
+            else:
+                pt.wordCount = heapL.wordCount
         
-        heapLawList.append(pt)
+            heapLawList.append(pt)
+        except:
+            print traceback.format_exc()
+            break
 
     outputHeapLawData(heapLawList, datasize)

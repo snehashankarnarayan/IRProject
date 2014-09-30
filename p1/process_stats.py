@@ -107,36 +107,36 @@ def computeExtraStats(datasize, stats):
     lines = []
 
     #Analyze strong
-    wordlist = stats.strongHash.most_common(10)
+    wordlist = stats.strongHash.most_common(15)
     
     for item in wordlist:
         line = "Strong " + item[0] + " " + str(item[1]) + "\n"
         lines.append(line)
     
     #Analyze powerful
-    wordlist = stats.powerfulHash.most_common(10)
+    wordlist = stats.powerfulHash.most_common(15)
     
     for item in wordlist:
         line = "powerful " + item[0] + " " + str(item[1]) + "\n"
         lines.append(line)
     
     #Analyze salt
-    wordlist = stats.saltHash.most_common(10)
+    wordlist = stats.saltHash.most_common(15)
     
     for item in wordlist:
         line = "salt " + item[0] + " " + str(item[1]) + "\n"
         lines.append(line)
 
     #Analyze butter
-    wordlist = stats.butterHash.most_common(10)
+    wordlist = stats.butterHash.most_common(15)
     
     for item in wordlist:
         line = "butter " + item[0] + " " + str(item[1]) + "\n"
         lines.append(line)
 
     #Word adjacency - james
-    wordlist = stats.jamesAdjacentHash.most_common(5)
-    prelist = stats.jamesPrecedingHash.most_common(5)
+    wordlist = stats.jamesAdjacentHash.most_common(10)
+    prelist = stats.jamesPrecedingHash.most_common(10)
     
     for item in wordlist:
         line = "James " + item[0] + " " + str(item[1]) + "\n"
@@ -147,8 +147,8 @@ def computeExtraStats(datasize, stats):
         lines.append(line)
     
     #Word adjacency - washington
-    wordlist = stats.washingtonAdjacentHash.most_common(5)
-    prelist = stats.washingtonPrecedingHash.most_common(5)
+    wordlist = stats.washingtonAdjacentHash.most_common(10)
+    prelist = stats.washingtonPrecedingHash.most_common(10)
     
     for item in wordlist:
         line = "washington " + item[0] + " " + str(item[1]) + "\n"
@@ -159,8 +159,8 @@ def computeExtraStats(datasize, stats):
         lines.append(line)
     
     #Word adjacency - church
-    wordlist = stats.churchAdjacentHash.most_common(5)
-    prelist = stats.churchPrecedingHash.most_common(5)
+    wordlist = stats.churchAdjacentHash.most_common(10)
+    prelist = stats.churchPrecedingHash.most_common(10)
     
     for item in wordlist:
         line = "church " + item[0] + " " + str(item[1]) + "\n"
