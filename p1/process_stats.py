@@ -66,9 +66,12 @@ def addUpStats(statList):
 
 def processBulkStats(workerName, statListInQueue, statListOutQueue):
     while True:
-        statList = statListInQueue.get()
-        cumulativeStats = addUpStats(statList)
-        statListOutQueue.put(cumulativeStats)
+        try:
+            statList = statListInQueue.get()
+            cumulativeStats = addUpStats(statList)
+            statListOutQueue.put(cumulativeStats)
+        except:
+            pass
 
 def processFinalStats(statList):
     return addUpStats(statList) 
@@ -134,7 +137,7 @@ def computeExtraStats(datasize, stats):
         lines.append(line)
     
     for item in prelist:
-        line = "James precedence" + item[0] + " " + str(item[1]) + "\n"
+        line = "James precedence " + item[0] + " " + str(item[1]) + "\n"
         lines.append(line)
     
     #Word adjacency - washington
@@ -146,7 +149,7 @@ def computeExtraStats(datasize, stats):
         lines.append(line)
 
     for item in prelist:
-        line = "washington precedence" + item[0] + " " + str(item[1]) + "\n"
+        line = "washington precedence " + item[0] + " " + str(item[1]) + "\n"
         lines.append(line)
     
     #Word adjacency - church
@@ -158,7 +161,7 @@ def computeExtraStats(datasize, stats):
         lines.append(line)
     
     for item in prelist:
-        line = "church precedence" + item[0] + " " + str(item[1]) + "\n"
+        line = "church precedence " + item[0] + " " + str(item[1]) + "\n"
         lines.append(line)
     
     #Final write

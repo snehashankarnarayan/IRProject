@@ -91,9 +91,12 @@ def processDirectory(datasize, dirName):
         
     #Do a final sweep and add all the stats to be processed to the list    
     for i in range(0, statListCount):
-        statFinalList.append(statListOutQueue.get())
-        if(i % 100):
-            gc.collect()
+        try:
+            statFinalList.append(statListOutQueue.get(True, 240))
+            if(i % 100 == 0):
+                gc.collect()
+        except:
+            break
 
     cleanUpProcesses(fileworkerList, statworkerList)
     
