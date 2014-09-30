@@ -45,15 +45,15 @@ def processDirectory(datasize, dirName):
     statFinalList = []
     
     #Some counts
-    if(fileCount < 4):
+    if(fileCount < 8):
         fileWorkerThreadCount = fileCount
     else:
-        fileWorkerThreadCount = 4
+        fileWorkerThreadCount = 8
 
-    if(fileCount/4 < 10):
+    if(fileCount/4 < 4):
         statWorkerThreadCount = fileCount/4 + 1
     else:
-        statWorkerThreadCount = 10
+        statWorkerThreadCount = 4
 
     #keep track of processes
     fileworkerList = []
