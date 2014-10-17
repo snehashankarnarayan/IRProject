@@ -37,7 +37,7 @@ def getPageID(fileName):
 
 
 def processPage(pageText, fp, fileName, pageCount):
-    pageId = getPageID(fileName) + "_" + str(pageCount)
+    pageId = getPageID(fileName) + "-" + pageCount
     lines = []
     line = "<DOC>\n<DOCNO>" + pageId + "</DOCNO>\n<TEXT>"
     lines.append(line)
@@ -48,18 +48,17 @@ def processPage(pageText, fp, fileName, pageCount):
 
 def processFile(fileName, fp):
     pageText = ""
-    pageCount = 0
+    pageCount = ""
     for event, elem in ET.iterparse(fileName):
-        if (elem.tag == "page" and event == 'start'):
-            pageText = ""
-        if(elem.tag == "line" and event == 'end' and elem.text != None):
+        if(elem.tag == "line" and event == "end" and elem.text != None):
             pageText = pageText + " " + elem.text
-        if(elem.tag == "page" and event == 'end'):
+        if(elem.tag == "page" and event == "end"):
             pageText = pageText.strip()
+            attrib = elem.attrib
+            pageCount = attrib["id"]
             if(len(pageText) > 0):
                 processPage(pageText, fp, fileName, pageCount)
                 pageText = ""
-                pageCount += 1
         elem.clear() 
 
 def make_trec(dirName):
