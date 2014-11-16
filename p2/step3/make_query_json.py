@@ -10,7 +10,7 @@ import json
 
 def processFile(fileName):
     split = fileName.split('.')
-    outfile = split[0] + ".json"
+    outfile =  "queries-robust.json"
     fp = open(outfile, "w")
     
     queryList = []

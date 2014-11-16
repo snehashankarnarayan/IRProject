@@ -1,0 +1,29 @@
+Avg precision 2 1.0
+Precision at 10: 2 0.8
+Avg precision 5 1.0
+Precision at 10: 5 0.0
+Avg precision 6 1.0
+Precision at 10: 6 0.4
+Precision at 10: 7 0.0
+Avg precision 11 1.0
+Precision at 10: 11 0.4
+Avg precision 16 1.0
+Precision at 10: 16 0.6
+Avg precision 17 1.0
+Precision at 10: 17 0.9
+Avg precision 20 1.0
+Precision at 10: 20 0.5
+Avg precision 22 1.0
+Precision at 10: 22 0.2
+Avg precision 28 1.0
+Precision at 10: 28 0.4
+Mean Avg precision 0.272727272727
+NDCG: 2 1.38373077221
+NDCG: 5 1.27315093681
+NDCG: 6 1.23068986352
+NDCG: 11 1.4816830471
+NDCG: 16 1.54444418917
+NDCG: 17 1.56545107708
+NDCG: 20 1.8896486633
+NDCG: 22 1.46665558522
+NDCG: 28 1.57595757756

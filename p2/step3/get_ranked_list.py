@@ -8,7 +8,7 @@ import sys
 def processFile(fileName, outfile):
     fp = open(outfile, "w")
     lines = []
-    command = "/home/sneha/phoenix/galago/galago-3.6-bin/bin/galago batch-search --index='/phoenix/ir_code/galago-index-books' --requested=100 /home/sneha/phoenix/IRProject/p2/step3/" + fileName
+    command = "/home/sneha/phoenix/galago/galago-3.6-bin/bin/galago batch-search --index='/phoenix/ir_code/galago-index-rb4' --requested=100 /home/sneha/phoenix/IRProject/p2/step3/" + fileName
     outl = subprocess.check_output(command, shell=True) 
     out = outl.split('\n')
     for inline in out:
