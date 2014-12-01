@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.28)  17 NOV 2014 19:33
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.28)  24 NOV 2014 19:50
 entering extended mode
  %&-line parsing enabled.
-**report.tex
-(./report.tex
+**snehas-prelimReport.tex
+(./snehas-prelimReport.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
 yphenation, farsi, arabic, croatian, bulgarian, ukrainian, russian, czech, slov
@@ -314,8 +314,9 @@ Package: geometry 2008/12/21 v4.2 Page Geometry
 \Gm@even@mp=\dimen124
 \Gm@dimlist=\toks30
 
-(/usr/share/texmf-texlive/tex/xelatex/xetexconfig/geometry.cfg)) (./report.aux)
-\openout1 = `report.aux'.
+(/usr/share/texmf-texlive/tex/xelatex/xetexconfig/geometry.cfg))
+(./snehas-prelimReport.aux)
+\openout1 = `snehas-prelimReport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
@@ -331,6 +332,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
 LaTeX Font Info:    ... okay on input line 34.
+
 (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count115
@@ -355,10 +357,10 @@ Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
 )
 LaTeX Info: Redefining \ref on input line 34.
 LaTeX Info: Redefining \pageref on input line 34.
- (./report.out)
-(./report.out)
+
+(./snehas-prelimReport.out) (./snehas-prelimReport.out)
 \@outlinefile=\write3
-\openout3 = `report.out'.
+\openout3 = `snehas-prelimReport.out'.
 
 \AtBeginShipoutBox=\box33
 
@@ -403,89 +405,45 @@ driver: pdftex
 
 (1in=72.27pt, 1cm=28.45pt)
 -----------------------
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 53.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 63.
 (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 53.
-LaTeX Font Info:    Try loading font information for U+msa on input line 54.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 63.
+LaTeX Font Info:    Try loading font information for U+msa on input line 71.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 54.
+LaTeX Font Info:    Try loading font information for U+msb on input line 71.
 
 (/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 54.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 71.
 
 (/usr/share/texmf-texlive/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 77--97
-
- []
-
-
-Overfull \hbox (2.76009pt too wide) in paragraph at lines 77--97
-[] 
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 100--123
-
- []
-
-
-Overfull \hbox (2.76009pt too wide) in paragraph at lines 100--123
-[] 
- []
-
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 125--127
-
- []
-
-
-Overfull \hbox (2.76009pt too wide) in alignment at lines 127--149
- [] [] [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 149
- []
-
-
-Overfull \hbox (2.76009pt too wide) in alignment at lines 149--152
- [] [] [] [] 
- []
-
-[4] [5] AED: lastpage setting LastPage [6] (./report.aux) ) 
+] AED: lastpage setting LastPage [2]
+(./snehas-prelimReport.aux) ) 
 Here is how much of TeX's memory you used:
- 5846 strings out of 493848
- 81268 string characters out of 1152823
- 175992 words of memory out of 3000000
- 8990 multiletter control sequences out of 15000+50000
- 10813 words of font info for 42 fonts, out of 3000000 for 9000
+ 5826 strings out of 493848
+ 81269 string characters out of 1152823
+ 159992 words of memory out of 3000000
+ 8986 multiletter control sequences out of 15000+50000
+ 10466 words of font info for 41 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 38i,10n,43p,698b,364s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts
-/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/publ
-ic/amsfonts/cm/cmmi12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts
-/cm/cmmi6.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pf
-b></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/shar
-e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texli
-ve/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/ty
-pe1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-texlive/fonts/type1/public/
-amsfonts/cm/cmtt12.pfb>
-Output written on report.pdf (6 pages, 125941 bytes).
+ 38i,10n,43p,409b,401s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfo
+nts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on snehas-prelimReport.pdf (2 pages, 52967 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 22 named destinations out of 1000 (max. 500000)
+ 39 PDF objects out of 1000 (max. 8388607)
+ 7 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

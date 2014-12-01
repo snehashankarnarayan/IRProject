@@ -127,16 +127,6 @@ def calculate_measures(filename, rankfilename, rang):
     
     outfile.close()
 
-    lfile = open(filename + "-latex.txt","w")
-    if((len(ndcg_list) != len(prec10_list)) or (len(prec10_list) != len(avg_list))):
-        print "latex error"
-    else:
-        #one, 15900 & most, 3457 & than, 597 & hehe\\
-        for i in range(0, len(avg_list)):
-            line = qno_list[i] + " & " + str(avg_list[i]) + " & " +  str(prec10_list[i]) + " & " +  str(ndcg_list[i]) + "\\\\" + "\n"
-            lfile.write(line)
-    lfile.close()
-
 if __name__ == "__main__":
     t1 = time()
     #Usage: filename, items in one line, precision_range
