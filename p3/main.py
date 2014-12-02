@@ -2,12 +2,11 @@
 
 import sys
 from time import time
-from expand_query import *
+from process_queries import *
 
 if __name__ == "__main__":
     t1 = time()
-    terms = expand_query(sys.argv[1], sys.argv[2])
-    print terms
+    process_queries(sys.argv[1])
     t2 = time()
     minutes = (t2 - t1)/60.0
     fp = open("output/snehas_time.txt", "w")

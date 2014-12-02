@@ -74,7 +74,7 @@ def expand_query(query, query_no):
         get_correlated_words(cleaned_query_words, doc)
 
     expanded_query_terms = list()
-    
+    all_terms_list = list()
     #Some terminologies
     #p_t = Probability of query term = count(query_term)/vocab_length
     #p_c = Probability of correlated term = count(cor_term)/vocab_length
@@ -82,27 +82,56 @@ def expand_query(query, query_no):
     #i_ct = log(p_ct/p_c.p_t)
     #word_dict = dict(); query_word_counter = Counter(); cor_word_counter = Counter(); vocab_length = 0
     for word in cleaned_query_words:
+        term_list = list()
         word_dict_counts = word_dict[word]
-
-        p_t = query_word_counter[word] * 1.0 / vocab_length
         
-        cor_word_list = word_dict_counts.keys()
+        try:
+            p_t = query_word_counter[word] * 1.0 / vocab_length
+            
+            cor_word_list = word_dict_counts.keys()
 
-        i_ct_list = dict()
-        for c in cor_word_list:
-            p_c = cor_word_counter[c] * 1.0 / vocab_length
-            p_ct = word_dict_counts[c] * 1.0 / query_word_counter[word]
-            i_ct = math.log(p_ct/(p_c * p_t))
-            i_ct_list[c] = i_ct
-        
-        i_ct_values = i_ct_list.values()
-        max_ict = max(i_ct_values)
-        min_ict = min(i_ct_values)
-
-        for c in cor_word_list:
-            i_ct_list[c] = (i_ct_list[c] - min_ict)/(max_ict - min_ict)
-            if(i_ct_list[c] <= 0.5):
-                if c not in cleaned_query_words:
-                    expanded_query_terms.append(c)
-        #for w in sorted(i_ct_list, key = i_ct_list.__getitem__, reverse = False):
-    return expanded_query_terms
+            i_ct_list = dict()
+            for c in cor_word_list:
+                p_c = cor_word_counter[c] * 1.0 / vocab_length
+                if(query_word_counter[word] != 0):
+                    p_ct = word_dict_counts[c] * 1.0 / query_word_counter[word]
+                else:
+                    p_ct = 0
+                if(p_c != 0 and p_t != 0):
+                    i_ct = math.log(p_ct/(p_c * p_t))
+                else:
+                    i_ct = 0
+                i_ct_list[c] = i_ct
+           
+            i_ct_values = i_ct_list.values()
+            max_ict = 0
+            min_ict = 0
+            if(len(i_ct_values) > 0):
+                max_ict = max(i_ct_values)
+                min_ict = min(i_ct_values)
+            
+            if(max_ict != min_ict):
+                for c in cor_word_list:
+                    i_ct_list[c] = (i_ct_list[c] - min_ict)/(max_ict - min_ict)
+            
+            for w in sorted(i_ct_list, key = i_ct_list.__getitem__, reverse = False):
+                if(i_ct_list[w] <= 0.5):
+                    if w not in cleaned_query_words:
+                        term_list.append(w)
+            
+            all_terms_list.append(term_list)
+        except:
+            pass
+       
+    #Term list comes in sorted values
+    for term_list in all_terms_list:
+        for i in range(0, 2):
+            if(i < len(term_list)):
+                expanded_query_terms.append(term_list[i])
+    
+    new_list = list()
+    for word in expanded_query_terms:
+        if word not in new_list:
+            new_list.append(word)
+    
+    return new_list
