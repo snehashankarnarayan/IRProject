@@ -1,34 +1,34 @@
-Avg precision 2 0.352221662181
-Precision at 10: 2 0.8
-Avg precision 5 0.0754985754986
-Precision at 10: 5 0.0
-Avg precision 6 0.559106075896
-Precision at 10: 6 0.4
+Avg precision 2 0.190206076549
+Precision at 10: 2 0.4
+Avg precision 5 0.0833333333333
+Precision at 10: 5 0.1
+Avg precision 6 0.445288242982
+Precision at 10: 6 0.3
 Avg precision 7 No relevant docs
 Precision at 10: 7 0.0
-Avg precision 11 0.234361345472
-Precision at 10: 11 0.4
-Avg precision 16 0.696378846753
-Precision at 10: 16 0.6
-Avg precision 17 0.727555220791
-Precision at 10: 17 0.9
-Avg precision 20 0.311071428571
-Precision at 10: 20 0.5
-Avg precision 22 0.242262536013
-Precision at 10: 22 0.2
-Avg precision 28 0.31403057931
-Precision at 10: 28 0.4
+Avg precision 11 0.14418667752
+Precision at 10: 11 0.2
+Avg precision 16 0.338702321994
+Precision at 10: 16 0.5
+Avg precision 17 0.00662055335968
+Precision at 10: 17 0.0
+Avg precision 20 0.223107062102
+Precision at 10: 20 0.3
+Avg precision 22 0.129815589573
+Precision at 10: 22 0.1
+Avg precision 28 0.0890276400745
+Precision at 10: 28 0.0
 Avg precision 29 0.5
 Precision at 10: 29 0.2
-Mean Avg precision 0.364771479135
-NDCG: 2 0.61114492934
-NDCG: 5 0.354367255313
-NDCG: 6 0.59046588894
+Mean Avg precision 0.19548068159
+NDCG: 2 0.424282373327
+NDCG: 5 0.377217861525
+NDCG: 6 0.497718182133
 NDCG: 7 No relevant docs
-NDCG: 11 0.571989907287
-NDCG: 16 0.892767104217
-NDCG: 17 0.85198961753
-NDCG: 20 0.658837225852
-NDCG: 22 0.523246797041
-NDCG: 28 0.604024655918
-NDCG: 29 0.652012130191
+NDCG: 11 0.502669666331
+NDCG: 16 0.832349644283
+NDCG: 17 No relevant docs
+NDCG: 20 0.546320184976
+NDCG: 22 0.585619077822
+NDCG: 28 0.264986197633
+NDCG: 29 0.649635183182

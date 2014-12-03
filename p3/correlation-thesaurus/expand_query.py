@@ -20,7 +20,7 @@ def get_correlated_words(cleaned_query_words, doc):
     global cor_word_counter
     global vocab_length
     
-    command = "/home/sneha/phoenix/galago/galago-3.6-bin/bin/galago doc --index=/phoenix/ir_code/galago-index-rb4/ --id=" + doc + " --text=true --metadata=false --tokenize=true | sed -n '/Term vector:/,/<TEXT>/p'"
+    command = "/home/sneha/phoenix/galago/galago-3.6-bin/bin/galago doc --index=/phoenix/ir_code/galago-index-books/ --id=" + doc + " --text=true --metadata=false --tokenize=true | sed -n '/Term vector:/,/<TEXT>/p'"
     outl = subprocess.check_output(command, shell=True) 
     out = outl.split('\n')
     word_array = list()
@@ -61,7 +61,16 @@ def get_correlated_words(cleaned_query_words, doc):
     print "Done processing " + doc
 
 def expand_query(query, query_no):
+    #Some initialization
     global word_dict
+    global query_word_counter
+    global cor_word_counter
+    global vocab_length
+    word_dict = dict()
+    query_word_counter = Counter()
+    cor_word_counter = Counter()
+    vocab_length = 0
+    
     docs = run_galago(query, query_no)
     query_words = query.split()
     cleaned_query_words = list()
@@ -131,7 +140,7 @@ def expand_query(query, query_no):
     
     new_list = list()
     for word in expanded_query_terms:
-        if word not in new_list:
+        if word not in new_list and len(word) != 1 and word.isdigit() == False:
             new_list.append(word)
     
     return new_list

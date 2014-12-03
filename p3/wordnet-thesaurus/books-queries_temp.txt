@@ -1,34 +1,34 @@
-1:churches of ancient days 
-2:Roman Empire 
-3:George Washington 
-4:weapon development 
-5:lead poisoning effects 
-6:cathode ray experiment 
-7:rio de gabio 
-8:plays Shakespeare did not write 
-9:Princess of Hannover 
-10:Columbus first voyage 
-11:spider web 
-12:Galileo church conflict 
-13:New York clubs 
-14:celebrity accident 
-15:Christopher Columbus 
-16:amino acid 
-17:revolt of 1857 
-18:sugar preserves 
-19:presidents who died in office 
-20:Beethoven birthplace 
-21:plastic waste 
-22:mining iron Canada 
-23:largest land animal 
-24:death in civil war 
-25:civil war 
-26:Kepler second law 
-27:Salt Lake City 
-28:prevent bacteria growth meat 
-29:curie radium discovery 
-30:colonies economic benefits 
-31:Boston Tea Party 
-32:Industrial Revolution 
-33:American civil war 
-34:events between China and US in Vietnam War 
+1:churches of ancient days  day church souls religions abbey protestants
+2:Roman Empire  empire empires roman imperium romans domain
+3:George Washington  washington george was va al states
+4:weapon development  weapons developments evolution spear growths growth
+5:lead poisoning effects  results leads poisonings result consequence pb
+6:cathode ray experiment  rays experiments cathodes light testing research
+7:rio de gabio  rios metropolis cities city durango troy
+8:plays Shakespeare did not write  plaies shakspere shakespeare play shaksperes shakespeares
+9:Princess of Hannover  princess hanover hannover princesses port city
+10:Columbus first voyage  columbuss voyages columbus rank sail former
+11:spider web  webs spiders webbing object objects trap
+12:Galileo church conflict  churchs galileo galileos struggles churches struggle
+13:New York clubs  society lodge yorks club york societies
+14:celebrity accident  celebrities fame accidents mishaps immortal personages
+15:Christopher Columbus  columbus columbuss christophers christopher city balboa
+16:amino acid  acids radical group compounds phenol groups
+17:revolt of 1857  insurrection revolts rebellions uprisings rising rebellion
+18:sugar preserves  preserve conserves sugars carbohydrates carbohydrate jellies
+19:presidents who died in office  bureau president offices madison clinton buchanan
+20:Beethoven birthplace  birthplaces beethoven beethovens origin sources composer
+21:plastic waste  plastics material excretions activity fumes solid
+22:mining iron Canada  canadas canada metals metal copper co
+23:largest land animal  lands creatures creature beasts beast animals
+24:death in civil war  deaths wars warfare going change enmity
+25:civil war  warfare wars battles fight states blockade
+26:Kepler second law  keplers kepler sec moment mo s
+27:Salt Lake City  lake lakes cities city salts salt
+28:prevent bacteria growth meat  kernels meats bacterium growing pork diplococcus
+29:curie radium discovery  find curies discoveries finds deed determinations
+30:colonies economic benefits  settlements colony settlement benefit body plantation
+31:Boston Tea Party  tea parties boston party teas organization
+32:Industrial Revolution  revolution revolutions changes change conflict harm
+33:American civil war  americans wars warfare american appalachian tory
+34:events between China and US in Vietnam War  event america usa war wars cases
