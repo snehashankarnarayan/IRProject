@@ -3,9 +3,18 @@
 from textblob import Word
 from textblob.wordnet import NOUN
 from textblob.wordnet import VERB
-p = Word("plant", NOUN)
-q = Word("obviously", VERB)
+import json
+from pprint import pprint
+import sys
 
+fp = open(sys.argv[1], "r")
+
+k = json.load(fp)
+pprint(k)
+
+
+
+'''
 print q
 
 psyn = p.get_synsets(NOUN)
@@ -20,4 +29,4 @@ for i in psyn:
             max_syn = syn
 
 print max_syn
-
+'''
