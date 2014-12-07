@@ -1,196 +1,176 @@
-\documentclass[12pt,letterpaper]{article}
+\documentclass[a4paper, 12pt, notitlepage]{report}
 \usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
-\usepackage{fullpage}
-\usepackage{lastpage}
-\usepackage{enumerate}
-\usepackage{fancyhdr}
-\usepackage{mathrsfs}
-\usepackage{graphicx}
-\usepackage{longtable}
-\usepackage{cite}
-\usepackage{hyperref}
-\DeclareGraphicsExtensions{.pdf,.png,.jpg}
 \usepackage[margin=3cm]{geometry}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{esvect}
+\usepackage[table,xcdraw]{xcolor}
 \setlength{\parindent}{0.0in}
 \setlength{\parskip}{0.05in}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
 
-% Edit these as appropriate
-\newcommand\course{CS646}
-\newcommand\semester{Fall 2014}     % <-- current semester
-\newcommand\hwnum{2}                  % <-- homework number
-\newcommand\yourname{Sneha Shankar Narayan} % <-- your name
-
-\fancypagestyle{firstpage}{
-\headheight 30pt
-\lhead{\yourname\ \\\course\ --- \semester}
-\chead{\textbf{\large Report on P \hwnum}}
-\rhead{snehas@cs.umass.edu}
-}
-\thispagestyle{firstpage}
-
-
-\headsep 15pt
+\title{Combining Multiple Evidence from Different Types of Thesaurus for Query Expansion}
+\author{Sneha Shankar Narayan}
+\date{\today}
 
 \begin{document}
-\section*{The system}
-\subsection*{Search Engine: Galago}
-I used the search engine Galago, and I felt it was fairly simple to use. The setup was painless; all I had to do was download the binary and run it.
+\maketitle
+\begin{center}
+\Large{
+\textbf{CS646} - Information Retrieval}
+\end{center}
+\newpage
 
-The command line options were intuitive and I could easily perform batch-searches that were needed for the third step of the project. Galago can also run a web server which I found was simple to use during the query formulation process.
+\tableofcontents
 
-The results gotten from Galago varied when it comes to the documents retrieved and that is described in the later sections.  
+\chapter{Background}
+Query expansion (QE) is the process of reformulating a seed query to improve retrieval performance in information retrieval operations. \cite{wiki} The given input is evaluated and additional search terms are added to in order to retrieve more relevant documents.
 
-\subsection*{Query creation}
-Query creation was interesting in the sense you wanted to get enough relevant documents, not too many or too less. It was interesting to play around with the exact words in the query and see how the system reacted. I came up with the query "curie radiation discovery" for the books dataset thinking that since books was about data before 1920 I could get some pretty interesting results. When I just used the query "Marie curie", I got a list of all relevant documents in the top 10 result mostly which mentioned "Marie Curie" in passing. However adding more words to the query made the result set more interesting. This exercise also helps in defining what "relevance" actually means.
+The approach being explored in this project is combining different types of thesaurus for query expansion. Thesauri
+have frequently been incorporated in information retrieval systems as a device for the recognition of synonymous expressions and linguistic entities that are semantically similar but superficially distinct. \cite{paper}
+This is based off of the idea presented in the paper "Combining multiple evidence from different types of Thesaurus for query expansion" by Rila Mandala, Takenobu Tokunaga, Hozumi Tanaka \cite{paper}. 
 
-\subsection*{Document judging}
-This was a pretty interesting exercise and gave an insight to how evaluation of an IR system actually works. Reading the document and coming up with relevance values showed the importance of evaluation measures for an IR system.  
+The basic idea is to get "related" terms to the query terms from the different thesauri individually and combining them and evaluate how the expanded queries perform as opposed to the original queries.
 
-\subsection*{Creating the evaluation}
-The final step of P2 was about creating the evaluation. This just involved writing a script to read through the relevance judgments provided and comparing it against the ranked list given by Galago. The evaluation measures used were Average Precision, Mean average precision, and NDCG. This makes do for interesting conclusions about the search engine. The formulas used for calculating these values are as follows. 
+The various thesauri being used in this project are:
+\subsection*{Wordnet based thesaurus}
+WordNet is a hand-crafted thesaurus developed by Princeton University. In WordNet, words are organized into taxonomies where each node is a set of synonyms (a synset) representing a single sense. There are four different taxonomies based on different parts of speech and also there are many relationships defined among
+them. \cite{paper} The paper uses the noun taxonomy only.
 
+The similarity between words a and b can be defined as the shortest path from each sense of a to each sense of b
+\begin{equation*}
+sim_{path}(a, b) = max[-\log(\frac{N_p}{2D})]
+\end{equation*}
+
+where $N_p$ is the maximum number of nodes in path $p$ from a to b and $D$ is the maximum depth of the taxonomy.
+
+\subsection*{Co-occurence based thesaurus}
+This method is based on the assumption that a pair of words that occur frequently together in the same document are related to the same subject. Therefore word co-occurrence information can be used to identify semantic relationships between words.\cite{paper}
+
+The text is subdivided into pseudo-sentences of word-size 3, and each word in the query is compared against the words in the documents to determine co-occurrence. Mutual-information is used as a tool for computing similarity between words. Mutual information compares the probability of the co-occurrence of words a and b with the independent probabilities of occurrence of a and b:
+
+\begin{equation*}
+I(a,b) = \log\frac{P(a,b)}{P(a)P(b)}
+\end{equation*}
+
+where the probabilities of $P(a)$ and $P(b)$ are estimated by counting the number of occurrences of a and b in the document. The joint probability is estimated by counting the number of times that word a co-occurs with b
+
+\subsection*{Combined approach}
+The similarities from the above two approaches are averaged to calculate the similarities between two words a and b in the combined approach
+
+\begin{equation*}
+sim_{combined} (a,b) = \frac{sim_{wordnet} + sim_{co-occurence}}{2}
+\end{equation*}
+
+Since the similarities can be of an range they are normalized before being plugged into the above formula. For all similarities that are computed in the wordnet and co-occurence approaches the following formula is applied
+
+\begin{equation*}
+sim_{new} = \frac{sim_{old} - sim_{min}}{sim_{max} - sim_{min}}
+\end{equation*}
+
+
+%	\paragraph
+%The words having the similarity value above a certain threshold are picked and the queries are expanded. A query q %is expanded by adding the vector
+%\begin{equation*}
+%\vv{q} = (w_1^', w_2^',...,w_n^' )
+%\end{equation*}
+
+%Sto the original query vector. $$w_j^'$$ is equal to $$w_{ex}(q, t_j)$$ if it exceeds a certain threshold.
+
+\chapter{Evaluation Methodology}
+The original queries are expanded using the terms determined by each of the three approaches. The queries are run on Galago \cite{galago} and the new ranked lists are obtained. 
+
+The determined ranked lists are checked against the baseline (the experiments performed as a part of P2) and the following measures of interest are obtained
 \begin{itemize}
-\item Average precision \cite{ir}:
-\begin{equation*}
-AveP = \frac{\sum_{k=1}^{n} P(k)*rel(k)}{NumberOfRelevantDocuments}
-\end{equation*}
-where $\operatorname{rel}(k)$ is an indicator function equaling 1 if the item at rank k is a relevant document, zero otherwise.
-
-\item Mean average precision: Compute the average of average precisions across all queries.
-
-\item Precision at 10: This is equal to the number of relevant documents that are retrieved when there 10 documents are retrieved/10
-
-\item NDCG (Formula used is the one mentioned in Kaggle) \cite{ndcg}
-\begin{equation*}
-\mathrm{DCG_{p}} = \sum_{i=1}^{p} \frac{ 2^{rel_{i}} - 1 }{ \log_{2}(i+1)} 
-\end{equation*}
-\begin{equation*}
-    \mathrm{nDCG_{p}} = \frac{DCG_{p}}{IDCG_{p}} 
-\end{equation*}
-    
+\item Average precision and Mean average precision
+\item NDCG @ 10
+\item Precision @ 10
 \end{itemize}
 
-\section*{The evaluation}
-\subsection*{Performed experiments and results}
-Summarizing the results obtained.
+The queries in the books-medium collection, the queries for the robust collection from the class, and the TRECRobust collection were used to perform the experiments.
 
-\textbf{Books}
-\\
-\\
-\begin{tabular}{| p{3.5cm} | p{3.5cm} | p{3.5cm} | p{3.5cm} |}
-    \hline 
-    Query No & Average Precision & Precision at 20 & NDCG at 20\\ \hline
-    2 & 0.352221662181 & 0.8 & 0.61114492934\\
-    5 & 0.0754985754986 & 0.0 & 0.354367255313\\
-    6 & 0.559106075896 & 0.4 & 0.59046588894\\
-    7 & 0.0 & 0.0 & 0.0\\
-    11 & 0.234361345472 & 0.4 & 0.571989907287\\
-    16 & 0.696378846753 & 0.6 & 0.892767104217\\
-    17 & 0.727555220791 & 0.9 & 0.85198961753\\
-    20 & 0.311071428571 & 0.5 & 0.658837225852\\
-    22 & 0.242262536013 & 0.2 & 0.523246797041\\
-    28 & 0.31403057931 & 0.4 & 0.604024655918\\
-    29 & 0.5 & 0.2 & 0.652012130191\\
-    
-    \hline
-\end{tabular} 
+\chapter{Implementation}
+The queries that were obtained from the various collections had to be expanded and the implementation of the query expansion in each type of thesaurus was done using Python.
 
-\pagebreak
+In order to help with the implementation, all the word-similarity computation was done with the query words and the words in the top 50 ranked documents of the original query. Thus query expansion was basically done on the fly. 
 
-\textbf{Robust}
-\\
-\\
-\begin{tabular}{| p{3.5cm} | p{3.5cm} | p{3.5cm} | p{3.5cm} |}
-    \hline 
-    Query No & Average Precision & Precision at 20 & NDCG at 20\\ \hline
-    1 & 0.0619001610306 & 0.1 & 0.418400105268\\
-    5 & 0.0698717948718 & 0.0 & 0.282167911853\\
-    10 & 0.453585579208 & 0.6 & 0.635648770624\\
-    12 & 0.395469345469 & 0.4 & 0.715928000847\\
-    15 & 0.286652134378 & 0.4 & 0.556991610934\\
-    17 & 0.607142857143 & 0.3 & 0.953001274216\\
-    18 & 0.798737373737 & 0.8 & 0.926020454977\\
-    20 & 0.102674363486 & 0.0 & 0.477379984208\\
-    24 & 0.263716356108 & 0.1 & 0.640425522164\\
-    27 & 0.605326623504 & 0.5 & 0.875841503874\\
-    30 & 0.553289908485 & 0.6 & 0.523913511398\\
-    33 & 0.714285714286 & 0.5 & 0.999273228036\\
-    34 & 0.0625 & 0.0 & 0.321954465307\\
-    35 & 0.5 & 0.1 & 0.630929753571\\
-    
-    \hline
+\subsection*{Wordnet based thesaurus}
+The wordnet thesaurus was made available to python using textblob \cite{textblob} a text processing library for python. First, the top 50 documents were retrieved for the original query and the wordnet path similarity between every query word and the other words were computed. 
+
+The similarity threshold of 0.5 was applied to determine the similar words and for each query word the top 3 similar words were added to the query as long as the similarity threshold was met.
+ 
+\subsection*{Co-occurence thesaurus}
+The top 50 documents for the original query was retrieved. Counters are managed for the number of occurences of each of the query words in the retrieved documents. Hashes are managed to get the most co-occuring words with the query words in the documents revtrived. Mutual information values are computed for the co-occuring words.
+
+The similarity threshold (mutual information values) of 0.5 was applied to determine the similar words and for each query word the top 2 similar words were added to the query as long as the similarity threshold was met.  
+
+\subsection*{Combined approach}
+The similarities obtained from the above two methods were averaged and the set of words that were determined from both the approaches were added to the original query in order to expand it.
+
+\subsection*{Process}
+The query expansion and evaluation on each of the approaches had the following steps
+\begin{enumerate}
+\item Parse the queries.xml file in all the datasets and send each query to the script (of the method being evaluated) which does the query expansion.
+\item The obtained query along with the query number which is got from the XML file is output to a json file.
+\item Run the expanded queries on Galago and get the ranked list.
+\item Evaluate the expanded queries against the relevance judgements using the evaluation scripts that were written for P2.
+\end{enumerate}
+
+
+\chapter{Results and Analysis}
+
+The evaluation measures computed are the following:
+
+\subsection*{Mean average precision}
+
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[h]
+\begin{tabular}{| p{2.5cm} | p{2.5cm} | p{2.5cm} | p{2.5cm} | p{2.5cm} |}
+\hline
+\rowcolor[HTML]{BBDAFF} 
+                                         & Baseline (P2) & Wordnet Thesaurus & Co-occurence Thesaurus & Combined Approach \\ \hline
+\cellcolor[HTML]{BBDAFF}Books            & 0.3647        & 0.1954 (-46\%)    & 0.2906(-20.3\%)        & 0.2047 (-43.84\%) \\ \hline
+\cellcolor[HTML]{BBDAFF}Robust-class     & 0.3910        & 0.2812 (-28\%)    & 0.3811 (-2 \%)         & 0.2879 (-26.3\%)  \\ \hline
+\cellcolor[HTML]{BBDAFF}Robust-community & 0.2295        & 0.1549 (-32\%)    & 0.1843 (-19.69 \%)     & 0.1582 (-31.06\%) \\ \hline
 \end{tabular}
+\end{table}
 
-\pagebreak
-\textbf{Robust - community generated}
-\\
-\begin{longtable}{| p{3.5cm} | p{3.5cm} | p{3.5cm} | p{3.5cm} |}
-    \hline 
-    Query No & Average Precision & Precision at 20 & NDCG at 20\\ \hline
-    301 & 0.153224715678 & 0.6 & 0.758304318499\\
-    302 & 0.498046209353 & 0.7 & 0.915000273559\\
-    303 & 0.21855776526 & 0.1 & 0.770087137143\\
-    304 & 0.0860814985251 & 0.3 & 0.560990257318\\
-    305 & 0.00367556971331 & 0.0 & 0.278942945651\\
-    306 & 0.204549293041 & 0.8 & 0.971213155415\\
-    307 & 0.143441627969 & 0.6 & 0.723512939507\\
-    308 & 0.435897435897 & 0.2 & 0.919720789148\\
-    309 & 0.0 & 0.0 & 0.0\\
-    310 & 0.141025641026 & 0.3 & 0.786472491993\\
-    311 & 0.637789474316 & 0.9 & 0.970201337961\\
-    312 & 0.190909090909 & 0.3 & 0.852927865061\\
-    313 & 0.767989560453 & 1.0 & 1.0\\
-    314 & 0.0 & 0.0 & 0.0\\
-    315 & 0.00199306497814 & 0.0 & 0.270238154427\\
-    316 & 0.56980698544 & 0.7 & 0.878690728282\\
-    317 & 0.152380952381 & 0.4 & 0.771760914325\\
-    318 & 0.0138187229437 & 0.2 & 0.592432998229\\
-    319 & 0.041062562918 & 0.2 & 0.556419264628\\
-    320 & 0.0397031539889 & 0.1 & 0.333333333333\\
-    
-    \hline
-\end{longtable}
-The rest of the values for the community robust corpus is present in the result file \textit{robust04.qrels-output} present in the zip file for the code.
+\subsection*{Graphs}
+For easier analysis of the obtained results, it's interesting to see how the average precision works across the data sets:
 
-\textbf{Mean average precision values: }
-\begin{itemize}
-\item \textbf{Books:} 0.364771479135
-\item \textbf{Robust:} 0.391082300836
-\item \textbf{Community generated robust:} 0.229561528619
-\end{itemize}
+Average precision on the books-medium queries:
+\begin{center}
+\includegraphics[scale = 0.4]{books_avg}
+\end{center}
 
-\textbf{Conclusion from above experiments}
-\begin{itemize}
-\item The mean average precisions are fairly small which indicates that the system can do better.
-\item There are a lot of queries where the precision at 10 is zero but the average precision is not zero which indicates that the system is really slow in retrieving the relevant documents.
-\end{itemize}
+Average precision on the robust queries from class:
+\begin{center}
+\includegraphics[scale = 0.4]{robust-class_avg}
+\end{center}
 
-\subsection*{Performance on Class queries vs community robust queries}
-Looking at the mean average precision values we can come to the conclusion that the system performs better with the class queries rather than the community generated queries. This can mean that since the relevance scale was 0 - 5 in the case of class queries the definition of a relevant document is better defined and since documents with relevance judgement greater than or equal to 2 is considered relevant the number of documents judged like this would be more than in the case where a binary decision has to be made.
+Average precision on the robust04 queries:
+\begin{center}
+\includegraphics[scale = 0.4]{sampled-robust-comm_avg}
+\end{center}
 
-Also since I have retrieved 100 documents from galago for the queries in the community robust collection but we have judgments for around 1500 documents per query in that collection, the mean average precision might be a bit skewed.  I've tried to negate this effect by considering the fact that if the total relevant documents is greater than 100 (because of the 1500 judgements that we have) then I consider the number of relevant documents to be 100 while calculating average precision.
+From the above plots valid conclusions can be drawn from the robust04 query results. We notice that the graphs for co-occurence based thesaurus queries and the 
 
-\subsection*{Performance on robust vs books }
-The mean average precision for the books collection and the class robust collection does not differ too much. Robust performs slightly better (0.39 as opposed to 0.36 in the case of the books collection). This can be due to the fact that the books corpus has very limited data (in the form of variety of topics) and the queries have no co-relation on the data that the corpus contains.
 
-\subsection*{Weak point and fix}
-I have noticed that for a few queries in all the collections no relevant documents were retrieved. 
-For example Query Number 7 in the books collection "rio de gabio" seems to have no relevant documents and the judgements also show that none of the documents are relevant. This indicates that there are absolutely no relevant documents for the query in the collection and because of this the IR system should not be penalized (it's precision reduces because of this). One fix that I can think of for this would be to do a quick check if there are any relevant documents at all in the corpus for a query and if not just return an appropriate result instead of retrieving documents which are obviously not relevant because there are no relevant documents.
+\chapter{Conclusion}
 
-\subsection*{What can make a better IR system?}
-Some of the techniques I can think of are:
-\begin{itemize}
-\item Query expansion: Words can be added to the queries from thesaurus or from the concept that the query is talking about to get better, more relevant results
-\item Pseudo relevance feedback: This can also improve the results.
-\item The IR system should also somehow have a vague idea about the corpus that is being searched through such that more relevant details are retrieved
-\end{itemize}
+Though in theory thesaurus 
 
 \begin{thebibliography}{1}
-\bibitem{ir} \url{en.wikipedia.org/wiki/Information_retrieval}
-\bibitem{ndcg} \url{http://www.kaggle.com/wiki/NormalizedDiscountedCumulativeGain}
-
+\bibitem{wiki} \url{http://en.wikipedia.org/wiki/Query_expansion}
+\bibitem{paper} \url{http://www.iro.umontreal.ca/~nie/IFT6255/mandala99combining.pdf}
+\bibitem{textblob} \url{http://textblob.readthedocs.org/en/dev/}
 \end{thebibliography}
 
 
-\end{document}
 
+\end{document}
