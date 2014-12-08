@@ -1,0 +1,742 @@
+Avg precision 301 0.0518414120639
+Precision at 10: 301 0.3
+Avg precision 302 0.509948644047
+Precision at 10: 302 0.8
+Avg precision 303 0.217241267046
+Precision at 10: 303 0.1
+Avg precision 304 0.0521327324599
+Precision at 10: 304 0.2
+Avg precision 305 0.0
+Precision at 10: 305 0.0
+Avg precision 306 0.100143737456
+Precision at 10: 306 0.3
+Avg precision 307 0.0993234055604
+Precision at 10: 307 0.5
+Avg precision 308 0.18961038961
+Precision at 10: 308 0.2
+Avg precision 309 0.0
+Precision at 10: 309 0.0
+Avg precision 310 0.0758852258852
+Precision at 10: 310 0.2
+Avg precision 311 0.212930420971
+Precision at 10: 311 0.5
+Avg precision 312 0.144155844156
+Precision at 10: 312 0.3
+Avg precision 313 0.68073819252
+Precision at 10: 313 1.0
+Avg precision 314 0.000307125307125
+Precision at 10: 314 0.0
+Avg precision 315 0.00418630620279
+Precision at 10: 315 0.0
+Avg precision 316 0.0178609881886
+Precision at 10: 316 0.0
+Avg precision 317 0.0902630215736
+Precision at 10: 317 0.1
+Avg precision 318 0.0324314893692
+Precision at 10: 318 0.3
+Avg precision 319 0.14620643402
+Precision at 10: 319 0.4
+Avg precision 320 0.0295566502463
+Precision at 10: 320 0.1
+Avg precision 321 0.0583455990058
+Precision at 10: 321 0.4
+Avg precision 322 0.000426257459506
+Precision at 10: 322 0.0
+Avg precision 323 0.182737644753
+Precision at 10: 323 0.7
+Avg precision 324 0.335053393821
+Precision at 10: 324 0.7
+Avg precision 325 0.022396005765
+Precision at 10: 325 0.1
+Avg precision 326 0.601475118328
+Precision at 10: 326 1.0
+Avg precision 327 0.23106844156
+Precision at 10: 327 0.3
+Avg precision 328 0.458664772727
+Precision at 10: 328 0.4
+Avg precision 329 0.176768950131
+Precision at 10: 329 0.5
+Avg precision 330 0.0581678382078
+Precision at 10: 330 0.2
+Avg precision 331 0.358459148422
+Precision at 10: 331 1.0
+Avg precision 332 0.00111111111111
+Precision at 10: 332 0.1
+Avg precision 333 0.256653242506
+Precision at 10: 333 0.8
+Avg precision 334 0.125603864734
+Precision at 10: 334 0.2
+Avg precision 335 0.136239201743
+Precision at 10: 335 0.4
+Avg precision 336 0.056388514875
+Precision at 10: 336 0.1
+Avg precision 337 0.114480599429
+Precision at 10: 337 0.2
+Avg precision 338 0.145833333333
+Precision at 10: 338 0.2
+Avg precision 339 0.102763474974
+Precision at 10: 339 0.1
+Avg precision 340 0.105110994238
+Precision at 10: 340 0.5
+Avg precision 341 0.000863555330868
+Precision at 10: 341 0.0
+Avg precision 342 0.0193465066721
+Precision at 10: 342 0.1
+Avg precision 343 0.0140339767593
+Precision at 10: 343 0.1
+Avg precision 344 0.311711145997
+Precision at 10: 344 0.2
+Avg precision 345 0.0542992671196
+Precision at 10: 345 0.2
+Avg precision 346 0.000333333333333
+Precision at 10: 346 0.0
+Avg precision 347 0.00811655514759
+Precision at 10: 347 0.0
+Avg precision 348 0.876666666667
+Precision at 10: 348 0.5
+Avg precision 349 0.120121853783
+Precision at 10: 349 0.6
+Avg precision 350 0.00213964597866
+Precision at 10: 350 0.0
+Avg precision 351 0.000393081761006
+Precision at 10: 351 0.0
+Avg precision 352 0.0915744036583
+Precision at 10: 352 0.4
+Avg precision 353 0.238440748517
+Precision at 10: 353 0.8
+Avg precision 354 0.0510521155425
+Precision at 10: 354 0.1
+Avg precision 355 0.103758844903
+Precision at 10: 355 0.5
+Avg precision 356 0.0170038639691
+Precision at 10: 356 0.1
+Avg precision 357 0.115970872276
+Precision at 10: 357 0.4
+Avg precision 358 0.00280112044818
+Precision at 10: 358 0.1
+Avg precision 359 0.00342261904762
+Precision at 10: 359 0.0
+Avg precision 360 0.225989368216
+Precision at 10: 360 0.6
+Avg precision 361 0.528872053872
+Precision at 10: 361 0.5
+Avg precision 362 0.000841376375699
+Precision at 10: 362 0.0
+Avg precision 363 0.0227554179567
+Precision at 10: 363 0.1
+Avg precision 364 0.500649972938
+Precision at 10: 364 0.7
+Avg precision 365 0.290292030241
+Precision at 10: 365 0.4
+Avg precision 366 0.326152909643
+Precision at 10: 366 0.8
+Avg precision 367 0.000340998170891
+Precision at 10: 367 0.0
+Avg precision 368 0.402629940802
+Precision at 10: 368 0.9
+Avg precision 369 0.288665494001
+Precision at 10: 369 0.3
+Avg precision 370 0.0448573478637
+Precision at 10: 370 0.2
+Avg precision 371 0.0
+Precision at 10: 371 0.0
+Avg precision 372 0.0107897135869
+Precision at 10: 372 0.1
+Avg precision 373 0.275935659429
+Precision at 10: 373 0.5
+Avg precision 374 0.110970686635
+Precision at 10: 374 0.5
+Avg precision 375 0.170006585809
+Precision at 10: 375 0.4
+Avg precision 376 0.00536142964313
+Precision at 10: 376 0.1
+Avg precision 377 0.207977188742
+Precision at 10: 377 0.4
+Avg precision 378 0.000392464678179
+Precision at 10: 378 0.0
+Avg precision 379 0.0625
+Precision at 10: 379 0.1
+Avg precision 380 0.009026297086
+Precision at 10: 380 0.0
+Avg precision 381 0.025
+Precision at 10: 381 0.2
+Avg precision 382 0.351559309263
+Precision at 10: 382 0.5
+Avg precision 383 0.0391737947355
+Precision at 10: 383 0.3
+Avg precision 384 0.183954200066
+Precision at 10: 384 0.4
+Avg precision 385 0.130423364477
+Precision at 10: 385 0.5
+Avg precision 386 0.0124357503929
+Precision at 10: 386 0.1
+Avg precision 387 0.0380596811274
+Precision at 10: 387 0.2
+Avg precision 388 0.048227828114
+Precision at 10: 388 0.2
+Avg precision 389 0.000111111111111
+Precision at 10: 389 0.0
+Avg precision 390 0.128826851253
+Precision at 10: 390 0.9
+Avg precision 391 0.0696058787519
+Precision at 10: 391 0.5
+Avg precision 392 0.0816606162453
+Precision at 10: 392 0.5
+Avg precision 393 0.0431905346551
+Precision at 10: 393 0.2
+Avg precision 394 0.00147058823529
+Precision at 10: 394 0.0
+Avg precision 395 0.0622244757717
+Precision at 10: 395 0.3
+Avg precision 396 0.336596261415
+Precision at 10: 396 1.0
+Avg precision 397 0.0293391430646
+Precision at 10: 397 0.2
+Avg precision 398 0.000111111111111
+Precision at 10: 398 0.0
+Avg precision 399 0.0024201836112
+Precision at 10: 399 0.0
+Avg precision 400 0.254959170406
+Precision at 10: 400 0.8
+Avg precision 401 0.0216175741552
+Precision at 10: 401 0.2
+Avg precision 402 0.0082787292057
+Precision at 10: 402 0.0
+Avg precision 403 0.581139564007
+Precision at 10: 403 0.6
+Avg precision 404 0.0335517609705
+Precision at 10: 404 0.2
+Avg precision 405 0.00641708852816
+Precision at 10: 405 0.1
+Avg precision 406 0.150396906603
+Precision at 10: 406 0.1
+Avg precision 407 0.0415741056404
+Precision at 10: 407 0.2
+Avg precision 408 0.0173058424802
+Precision at 10: 408 0.2
+Avg precision 409 0.110596896383
+Precision at 10: 409 0.3
+Avg precision 410 0.294764578919
+Precision at 10: 410 0.9
+Avg precision 411 0.293786028736
+Precision at 10: 411 0.5
+Avg precision 412 0.00194065350845
+Precision at 10: 412 0.0
+Avg precision 413 0.0368718181144
+Precision at 10: 413 0.1
+Avg precision 414 0.1634662482
+Precision at 10: 414 0.4
+Avg precision 415 0.240007240176
+Precision at 10: 415 0.7
+Avg precision 416 0.23966684303
+Precision at 10: 416 0.2
+Avg precision 417 0.0484214037062
+Precision at 10: 417 0.3
+Avg precision 418 0.114657495572
+Precision at 10: 418 0.5
+Avg precision 419 0.0451388888889
+Precision at 10: 419 0.2
+Avg precision 420 0.259669539215
+Precision at 10: 420 0.5
+Avg precision 421 0.00461847389558
+Precision at 10: 421 0.1
+Avg precision 422 0.0471520364962
+Precision at 10: 422 0.3
+Avg precision 423 0.61306054163
+Precision at 10: 423 0.9
+Avg precision 424 0.0192102148193
+Precision at 10: 424 0.0
+Avg precision 425 0.101213792708
+Precision at 10: 425 0.5
+Avg precision 426 0.0138888888889
+Precision at 10: 426 0.3
+Avg precision 427 0.212284521085
+Precision at 10: 427 0.5
+Avg precision 428 0.0590903004979
+Precision at 10: 428 0.2
+Avg precision 429 0.357119586606
+Precision at 10: 429 0.3
+Avg precision 430 0.594278541226
+Precision at 10: 430 0.3
+Avg precision 431 0.0262623405012
+Precision at 10: 431 0.2
+Avg precision 432 0.00231347599769
+Precision at 10: 432 0.0
+Avg precision 433 0.00145137880987
+Precision at 10: 433 0.0
+Avg precision 434 0.582609859551
+Precision at 10: 434 0.8
+Avg precision 435 0.0159410759175
+Precision at 10: 435 0.2
+Avg precision 436 0.0309134281543
+Precision at 10: 436 0.3
+Avg precision 437 0.00708736150226
+Precision at 10: 437 0.1
+Avg precision 438 0.136562123823
+Precision at 10: 438 0.8
+Avg precision 439 0.0104153735402
+Precision at 10: 439 0.2
+Avg precision 440 0.0605169733074
+Precision at 10: 440 0.3
+Avg precision 441 0.14529002294
+Precision at 10: 441 0.3
+Avg precision 442 0.000591016548463
+Precision at 10: 442 0.0
+Avg precision 443 0.192097716852
+Precision at 10: 443 0.7
+Avg precision 444 0.251367749897
+Precision at 10: 444 0.3
+Avg precision 445 0.122113197852
+Precision at 10: 445 0.4
+Avg precision 446 0.0265271382272
+Precision at 10: 446 0.2
+Avg precision 447 0.0230208333333
+Precision at 10: 447 0.1
+Avg precision 448 0.00242789860481
+Precision at 10: 448 0.0
+Avg precision 449 0.0755961442519
+Precision at 10: 449 0.3
+Avg precision 450 0.105781086428
+Precision at 10: 450 0.6
+Avg precision 601 0.51
+Precision at 10: 601 0.3
+Avg precision 602 0.0558634338766
+Precision at 10: 602 0.3
+Avg precision 603 0.435481431945
+Precision at 10: 603 0.7
+Avg precision 604 0.547443181818
+Precision at 10: 604 0.4
+Avg precision 605 0.00536462330931
+Precision at 10: 605 0.0
+Avg precision 606 0.313095238095
+Precision at 10: 606 0.5
+Avg precision 607 0.16539782057
+Precision at 10: 607 0.2
+Avg precision 608 0.00171412718229
+Precision at 10: 608 0.0
+Avg precision 609 0.123578451735
+Precision at 10: 609 0.3
+Avg precision 610 0.0
+Precision at 10: 610 0.0
+Avg precision 611 0.316267405654
+Precision at 10: 611 0.7
+Avg precision 612 0.174054204893
+Precision at 10: 612 0.4
+Avg precision 613 0.117472950998
+Precision at 10: 613 0.3
+Avg precision 614 0.101777777778
+Precision at 10: 614 0.3
+Avg precision 615 0.139928583361
+Precision at 10: 615 0.3
+Avg precision 616 0.061163837176
+Precision at 10: 616 0.3
+Avg precision 617 0.141051875602
+Precision at 10: 617 0.6
+Avg precision 618 0.180231378014
+Precision at 10: 618 0.2
+Avg precision 619 0.330596345011
+Precision at 10: 619 0.4
+Avg precision 620 0.00132275132275
+Precision at 10: 620 0.0
+Avg precision 621 0.296269617517
+Precision at 10: 621 0.6
+Avg precision 622 0.0013684651375
+Precision at 10: 622 0.0
+Avg precision 623 0.312394584434
+Precision at 10: 623 1.0
+Avg precision 624 0.181200998255
+Precision at 10: 624 0.4
+Avg precision 625 0.0221696571908
+Precision at 10: 625 0.1
+Avg precision 626 0.188429806344
+Precision at 10: 626 0.3
+Avg precision 629 0.155822017792
+Precision at 10: 629 0.3
+Avg precision 630 0.195833333333
+Precision at 10: 630 0.2
+Avg precision 631 0.0569516524581
+Precision at 10: 631 0.3
+Avg precision 632 0.0483759657963
+Precision at 10: 632 0.3
+Avg precision 633 0.383565676569
+Precision at 10: 633 0.8
+Avg precision 634 0.628192071087
+Precision at 10: 634 0.7
+Avg precision 635 0.437440371806
+Precision at 10: 635 0.6
+Avg precision 636 0.330055935701
+Precision at 10: 636 0.5
+Avg precision 637 0.416057349925
+Precision at 10: 637 0.6
+Avg precision 638 0.0157864265527
+Precision at 10: 638 0.1
+Avg precision 639 0.0398024221965
+Precision at 10: 639 0.1
+Avg precision 640 0.056301993495
+Precision at 10: 640 0.4
+Avg precision 641 0.224986638932
+Precision at 10: 641 0.5
+Avg precision 642 0.150462638714
+Precision at 10: 642 0.3
+Avg precision 643 0.267835529816
+Precision at 10: 643 0.6
+Avg precision 644 0.0104713149628
+Precision at 10: 644 0.1
+Avg precision 645 0.380408098024
+Precision at 10: 645 0.5
+Avg precision 646 0.143481626977
+Precision at 10: 646 0.1
+Avg precision 647 0.254659573335
+Precision at 10: 647 0.7
+Avg precision 648 0.00275510714107
+Precision at 10: 648 0.0
+Avg precision 649 0.708256126669
+Precision at 10: 649 1.0
+Avg precision 650 0.0
+Precision at 10: 650 0.0
+Avg precision 651 0.0525922524709
+Precision at 10: 651 0.1
+Avg precision 652 0.0925575179252
+Precision at 10: 652 0.5
+Avg precision 653 0.517323910005
+Precision at 10: 653 0.7
+Avg precision 654 0.0142202828907
+Precision at 10: 654 0.0
+Avg precision 655 0.00207039337474
+Precision at 10: 655 0.0
+Avg precision 656 0.120935364193
+Precision at 10: 656 0.5
+Avg precision 657 0.404211964506
+Precision at 10: 657 0.6
+Avg precision 658 0.019005534094
+Precision at 10: 658 0.0
+Avg precision 659 0.223477728412
+Precision at 10: 659 0.3
+Avg precision 660 0.573377737503
+Precision at 10: 660 0.8
+Avg precision 661 0.583278844211
+Precision at 10: 661 0.9
+Avg precision 662 0.045171282621
+Precision at 10: 662 0.1
+Avg precision 663 0.29238864683
+Precision at 10: 663 0.6
+Avg precision 664 0.426832426832
+Precision at 10: 664 0.5
+Avg precision 665 0.105263157895
+Precision at 10: 665 0.2
+Avg precision 666 0.015873015873
+Precision at 10: 666 0.0
+Avg precision 667 0.157082649223
+Precision at 10: 667 0.4
+Avg precision 668 0.145109693547
+Precision at 10: 668 0.5
+Avg precision 669 0.0637179245875
+Precision at 10: 669 0.2
+Avg precision 670 0.126209912966
+Precision at 10: 670 0.4
+Avg precision 671 0.163979396081
+Precision at 10: 671 0.5
+Avg precision 673 0.230558062798
+Precision at 10: 673 0.5
+Avg precision 674 0.160908333568
+Precision at 10: 674 0.4
+Avg precision 675 0.154332091936
+Precision at 10: 675 0.4
+Avg precision 676 0.122466673125
+Precision at 10: 676 0.5
+Avg precision 677 0.82967032967
+Precision at 10: 677 0.6
+Avg precision 678 0.0
+Precision at 10: 678 0.0
+Avg precision 679 0.897222222222
+Precision at 10: 679 0.6
+Avg precision 680 0.0370230263158
+Precision at 10: 680 0.2
+Avg precision 681 0.267472255365
+Precision at 10: 681 0.4
+Avg precision 682 0.120815520924
+Precision at 10: 682 0.3
+Avg precision 683 0.0201388888889
+Precision at 10: 683 0.2
+Avg precision 684 0.000886848756128
+Precision at 10: 684 0.0
+Avg precision 685 0.117637807631
+Precision at 10: 685 0.1
+Avg precision 686 0.0380162478255
+Precision at 10: 686 0.1
+Avg precision 687 0.205389322156
+Precision at 10: 687 0.7
+Avg precision 688 0.0001
+Precision at 10: 688 0.0
+Avg precision 689 0.0105408176342
+Precision at 10: 689 0.0
+Avg precision 690 0.00170068027211
+Precision at 10: 690 0.0
+Avg precision 691 0.108245739767
+Precision at 10: 691 0.2
+Avg precision 692 0.437085575226
+Precision at 10: 692 0.7
+Avg precision 693 0.208223211283
+Precision at 10: 693 0.3
+Avg precision 694 0.305652153069
+Precision at 10: 694 0.5
+Avg precision 695 0.258847476179
+Precision at 10: 695 0.9
+Avg precision 696 0.120867447398
+Precision at 10: 696 0.4
+Avg precision 697 0.16617387618
+Precision at 10: 697 0.5
+Avg precision 698 0.280532257107
+Precision at 10: 698 0.4
+Avg precision 699 0.063521274243
+Precision at 10: 699 0.4
+Avg precision 700 0.0513317040941
+Precision at 10: 700 0.2
+Mean Avg precision 0.158219311572
+NDCG: 301 0.773557724002
+NDCG: 302 0.940798173391
+NDCG: 303 0.696235186083
+NDCG: 304 0.498382370718
+NDCG: 305 No relevant docs
+NDCG: 306 0.78349066011
+NDCG: 307 0.734548768456
+NDCG: 308 0.468870024713
+NDCG: 309 No relevant docs
+NDCG: 310 0.544189688087
+NDCG: 311 0.850570922199
+NDCG: 312 0.761356941463
+NDCG: 313 1.0
+NDCG: 314 No relevant docs
+NDCG: 315 0.239812466568
+NDCG: 316 0.336728849833
+NDCG: 317 0.453613937049
+NDCG: 318 1.0
+NDCG: 319 0.640521739698
+NDCG: 320 0.333333333333
+NDCG: 321 0.699200499188
+NDCG: 322 No relevant docs
+NDCG: 323 0.95067217006
+NDCG: 324 0.806900716052
+NDCG: 325 0.330526084975
+NDCG: 326 0.997324172844
+NDCG: 327 0.852927865061
+NDCG: 328 0.955829593232
+NDCG: 329 0.851630235045
+NDCG: 330 0.734285841131
+NDCG: 331 0.995538711401
+NDCG: 332 0.301029995664
+NDCG: 333 0.935070020156
+NDCG: 334 0.650920929807
+NDCG: 335 0.64541991134
+NDCG: 336 0.356207187108
+NDCG: 337 0.491048219977
+NDCG: 338 0.482475559391
+NDCG: 339 0.531876638954
+NDCG: 340 0.943176516598
+NDCG: 341 No relevant docs
+NDCG: 342 0.356207187108
+NDCG: 343 1.0
+NDCG: 344 0.850344905535
+NDCG: 345 0.441307409357
+NDCG: 346 No relevant docs
+NDCG: 347 0.301280258761
+NDCG: 348 0.951231200063
+NDCG: 349 0.768628727065
+NDCG: 350 No relevant docs
+NDCG: 351 No relevant docs
+NDCG: 352 0.804473572954
+NDCG: 353 0.942682107268
+NDCG: 354 0.673315979992
+NDCG: 355 0.891410255188
+NDCG: 356 0.356207187108
+NDCG: 357 0.879462403066
+NDCG: 358 0.333333333333
+NDCG: 359 0.244650542118
+NDCG: 360 0.871319139794
+NDCG: 361 0.902747236577
+NDCG: 362 No relevant docs
+NDCG: 363 0.379066614635
+NDCG: 364 0.876164784534
+NDCG: 365 0.743485479624
+NDCG: 366 0.948590316806
+NDCG: 367 No relevant docs
+NDCG: 368 0.954785788982
+NDCG: 369 0.885297069459
+NDCG: 370 0.532192902472
+NDCG: 371 No relevant docs
+NDCG: 372 0.334582489888
+NDCG: 373 0.878222186641
+NDCG: 374 0.694392554526
+NDCG: 375 0.76903034072
+NDCG: 376 0.421008066951
+NDCG: 377 0.873552139211
+NDCG: 378 No relevant docs
+NDCG: 379 1.0
+NDCG: 380 No relevant docs
+NDCG: 381 0.564092094019
+NDCG: 382 0.929468742911
+NDCG: 383 0.811546212977
+NDCG: 384 0.854989486186
+NDCG: 385 0.864249348855
+NDCG: 386 0.356207187108
+NDCG: 387 0.740514262756
+NDCG: 388 0.752521984863
+NDCG: 389 No relevant docs
+NDCG: 390 0.967139034282
+NDCG: 391 0.819459942955
+NDCG: 392 0.917592359988
+NDCG: 393 0.82123777054
+NDCG: 394 No relevant docs
+NDCG: 395 0.725841147877
+NDCG: 396 0.998155020191
+NDCG: 397 0.543771309152
+NDCG: 398 No relevant docs
+NDCG: 399 No relevant docs
+NDCG: 400 0.940262623137
+NDCG: 401 0.827173928227
+NDCG: 402 0.278942945651
+NDCG: 403 0.760537118426
+NDCG: 404 0.418895232272
+NDCG: 405 0.315464876786
+NDCG: 406 0.533893147901
+NDCG: 407 0.749918647949
+NDCG: 408 0.44681678691
+NDCG: 409 0.747776955087
+NDCG: 410 0.98149761217
+NDCG: 411 0.930454430381
+NDCG: 412 No relevant docs
+NDCG: 413 0.417529023863
+NDCG: 414 0.819492145207
+NDCG: 415 0.789423632005
+NDCG: 416 0.560527880107
+NDCG: 417 0.584697462057
+NDCG: 418 0.933993207241
+NDCG: 419 0.571428504014
+NDCG: 420 0.900994583549
+NDCG: 421 0.384103202583
+NDCG: 422 0.967467983489
+NDCG: 423 0.961535974752
+NDCG: 424 0.239812466568
+NDCG: 425 0.866106695751
+NDCG: 426 0.633841230899
+NDCG: 427 0.920041075244
+NDCG: 428 0.718560923053
+NDCG: 429 0.682880143764
+NDCG: 430 0.876796894643
+NDCG: 431 0.480647471117
+NDCG: 432 No relevant docs
+NDCG: 433 No relevant docs
+NDCG: 434 0.978655224181
+NDCG: 435 0.797722889545
+NDCG: 436 0.73418031422
+NDCG: 437 0.386852807235
+NDCG: 438 0.859960184493
+NDCG: 439 0.559348957235
+NDCG: 440 0.607548944904
+NDCG: 441 0.76634912944
+NDCG: 442 0.235408913367
+NDCG: 443 0.91648850751
+NDCG: 444 0.824153478065
+NDCG: 445 0.862155679892
+NDCG: 446 0.576571583437
+NDCG: 447 0.386852807235
+NDCG: 448 No relevant docs
+NDCG: 449 0.662339951349
+NDCG: 450 0.694648482621
+NDCG: 601 0.709447202664
+NDCG: 602 0.787889204194
+NDCG: 603 0.914740863389
+NDCG: 604 0.875371482543
+NDCG: 605 0.270238154427
+NDCG: 606 0.976846145657
+NDCG: 607 0.781858467482
+NDCG: 608 No relevant docs
+NDCG: 609 0.752291204502
+NDCG: 610 No relevant docs
+NDCG: 611 0.89331221792
+NDCG: 612 0.626521517934
+NDCG: 613 0.56245706126
+NDCG: 614 0.757923746068
+NDCG: 615 0.466298720913
+NDCG: 616 0.844576642265
+NDCG: 617 0.668366628736
+NDCG: 618 0.768066000744
+NDCG: 619 0.526808169664
+NDCG: 620 No relevant docs
+NDCG: 621 0.949823814543
+NDCG: 622 No relevant docs
+NDCG: 623 0.887195873879
+NDCG: 624 0.637554930674
+NDCG: 625 0.630929753571
+NDCG: 626 0.522120753177
+NDCG: 629 0.698497873076
+NDCG: 630 0.484100362416
+NDCG: 631 0.568859404413
+NDCG: 632 0.818229896937
+NDCG: 633 0.788526150637
+NDCG: 634 0.848460902294
+NDCG: 635 0.916895174835
+NDCG: 636 0.68981582265
+NDCG: 637 0.603812341545
+NDCG: 638 0.395856983865
+NDCG: 639 1.0
+NDCG: 640 0.519283115851
+NDCG: 641 0.608260531174
+NDCG: 642 0.561721959478
+NDCG: 643 0.610293652672
+NDCG: 644 0.32427962745
+NDCG: 645 0.702781116871
+NDCG: 646 0.431965916802
+NDCG: 647 0.704471701445
+NDCG: 648 0.227670248697
+NDCG: 649 0.99920765203
+NDCG: 650 No relevant docs
+NDCG: 651 0.75274256663
+NDCG: 652 0.884464586416
+NDCG: 653 0.750910328058
+NDCG: 654 No relevant docs
+NDCG: 655 No relevant docs
+NDCG: 656 0.72628726554
+NDCG: 657 0.923322206655
+NDCG: 658 No relevant docs
+NDCG: 659 0.821313714614
+NDCG: 660 0.858056029821
+NDCG: 661 0.798252205817
+NDCG: 662 1.0
+NDCG: 663 0.836857061615
+NDCG: 664 0.711172582423
+NDCG: 665 1.0
+NDCG: 666 No relevant docs
+NDCG: 667 0.866424809382
+NDCG: 668 0.668609244692
+NDCG: 669 0.797722889545
+NDCG: 670 0.566669261044
+NDCG: 671 0.8418189479
+NDCG: 673 0.651632693223
+NDCG: 674 0.811487023428
+NDCG: 675 0.751814702408
+NDCG: 676 0.750797421282
+NDCG: 677 0.965035449958
+NDCG: 678 No relevant docs
+NDCG: 679 0.965136667179
+NDCG: 680 0.46351154223
+NDCG: 681 0.810439160456
+NDCG: 682 0.591395152838
+NDCG: 683 0.726830757107
+NDCG: 684 No relevant docs
+NDCG: 685 0.4781963244
+NDCG: 686 0.300242331152
+NDCG: 687 0.77299048483
+NDCG: 688 No relevant docs
+NDCG: 689 No relevant docs
+NDCG: 690 No relevant docs
+NDCG: 691 0.756547415744
+NDCG: 692 0.765876825066
+NDCG: 693 0.575613414534
+NDCG: 694 0.577188241351
+NDCG: 695 0.754683043122
+NDCG: 696 0.72402296436
+NDCG: 697 0.791666459133
+NDCG: 698 0.816558298361
+NDCG: 699 0.872824511501
+NDCG: 700 0.355319896741

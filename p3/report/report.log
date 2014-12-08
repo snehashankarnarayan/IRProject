@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.28)  7 DEC 2014 00:14
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2014.3.28)  7 DEC 2014 21:23
 entering extended mode
  %&-line parsing enabled.
 **report.tex
@@ -451,15 +451,12 @@ Chapter 1.
 
 ] [4]
 Chapter 2.
-
-LaTeX Warning: Citation `galago' on page 5 undefined on input line 84.
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 88.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 84.
 (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 88.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 84.
  [5
 
 ]
@@ -469,87 +466,96 @@ Chapter 3.
 ] [7]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--136
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
 []|\OT1/cmr/m/n/12 Wordnet
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--136
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
 []|\OT1/cmr/m/n/12 Co-occurence
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--136
+Underfull \hbox (badness 10000) in paragraph at lines 154--154
 []|\OT1/cmr/m/n/12 Combined
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--137
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
 []|\OT1/cmr/m/n/12 0.2906(-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--137
+Underfull \hbox (badness 10000) in paragraph at lines 155--155
 []|\OT1/cmr/m/n/12 0.2047 (-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 138--138
+Underfull \hbox (badness 10000) in paragraph at lines 156--156
 []|\OT1/cmr/m/n/12 0.2879 (-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--139
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
 []|\OT1/cmr/m/n/12 Robust-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 139--139
+Underfull \hbox (badness 10000) in paragraph at lines 157--157
 []|\OT1/cmr/m/n/12 0.1582 (-
  []
 
-<books_avg.png, id=86, 1003.75pt x 752.8125pt>
+<books_avg.png, id=98, 1003.75pt x 752.8125pt>
 File: books_avg.png Graphic file (type png)
  <use books_avg.png> [8
 
 ]
-<robust-class_avg.png, id=94, 1003.75pt x 752.8125pt>
+<robust-class_avg.png, id=105, 1003.75pt x 752.8125pt>
 File: robust-class_avg.png Graphic file (type png)
 
 <use robust-class_avg.png>
-<sampled-robust-comm_avg.png, id=95, 1003.75pt x 752.8125pt>
+<sampled-robust-comm_avg.png, id=106, 1003.75pt x 752.8125pt>
 File: sampled-robust-comm_avg.png Graphic file (type png)
 
 <use sampled-robust-comm_avg.png> [9 <./books_avg.png (PNG copy)> <./robust-cla
-ss_avg.png (PNG copy)>] [10 <./sampled-robust-comm_avg.png (PNG copy)>]
+ss_avg.png (PNG copy)>]
+<sampled-robust-comm_prec10.png, id=111, 1003.75pt x 752.8125pt>
+File: sampled-robust-comm_prec10.png Graphic file (type png)
+
+<use sampled-robust-comm_prec10.png> [10 <./sampled-robust-comm_avg.png (PNG co
+py)>] <sampled-robust-comm_ndcg10.png, id=117, 1003.75pt x 752.8125pt>
+File: sampled-robust-comm_ndcg10.png Graphic file (type png)
+
+<use sampled-robust-comm_ndcg10.png> [11 <./sampled-robust-comm_prec10.png (PNG
+ copy)>] [12 <./sampled-robust-comm_ndcg10.png (PNG copy)>]
 Chapter 5.
-[11
+[13
 
-] [12
+] [14
 
-] (./report.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 7115 strings out of 493848
- 101865 string characters out of 1152823
+ 7140 strings out of 493848
+ 102348 string characters out of 1152823
  190697 words of memory out of 3000000
- 10233 multiletter control sequences out of 15000+50000
- 13688 words of font info for 57 fonts, out of 3000000 for 9000
+ 10245 multiletter control sequences out of 15000+50000
+ 14035 words of font info for 58 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 41i,11n,38p,395b,360s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/sha
-re/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-te
-xlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/
-type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public
-/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on report.pdf (12 pages, 448103 bytes).
+ 41i,11n,38p,719b,362s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx
+12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/tex
+mf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-texlive/f
+onts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
+ts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr8.p
+fb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sh
+are/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-te
+xlive/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-texlive/fonts
+/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on report.pdf (14 pages, 797831 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 197 PDF objects out of 1000 (max. 8388607)
+ 47 named destinations out of 1000 (max. 500000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 

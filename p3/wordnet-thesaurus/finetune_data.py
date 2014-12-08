@@ -9,7 +9,7 @@ import sys
 def calculate_measures(filename, rankfilename, rang):
     fp = open(filename, "r")
     rfile = open(rankfilename, "r")
-    outfile = open(filename + "-plot", "w")
+    outfile = open(filename + "-ndcg10", "w")
     
     #Processing judgement file
     currentQuery = "none"
@@ -85,14 +85,14 @@ def calculate_measures(filename, rankfilename, rang):
                 if(rel_doc_num > 100):
                     rel_doc_num = 100
                 avg_prec = avg_prec/rel_doc_num
-                outfile.write(item.query + " " + str(avg_prec) + "\n")
+                #outfile.write(item.query + " " + str(avg_prec) + "\n")
                 avg_list.append(avg_prec)
                 mean_avg += avg_prec
             else:
                 #outfile.write("Avg precision " + item.query + " No relevant docs" + "\n")
                 avg_list.append(0.0)
             prec10 = prec10/10
-            #outfile.write("Precision at 10: " + item.query + " " + str(prec10) + "\n")
+            #outfile.write(item.query + " " + str(prec10) + "\n")
             prec10_list.append(prec10)
     mean_avg = mean_avg/qCounter
     #outfile.write("Mean Avg precision " + str(mean_avg) + "\n")
@@ -118,7 +118,7 @@ def calculate_measures(filename, rankfilename, rang):
                 idcg += (pow(2, sList[i]) - 1)/(math.log(j+1, 2))
             if(idcg > 0):
                 ndcg = dcg/idcg
-     #           outfile.write("NDCG: " + item.query + " " + str(ndcg) + "\n")
+                outfile.write(item.query + " " + str(ndcg) + "\n")
                 ndcg_list.append(ndcg)
             else:
       #          outfile.write("NDCG: " + item.query + " No relevant docs\n")
@@ -126,6 +126,12 @@ def calculate_measures(filename, rankfilename, rang):
 
     
     outfile.close()
+    navg = 0.0
+    for i in ndcg_list:
+        navg = navg + i
+    if(navg > 0):
+        navg = navg / len(ndcg_list)
+    print filename + "ndcg: " + str(navg) 
 '''
     lfile = open(filename + "-latex.txt","w")
     if((len(ndcg_list) != len(prec10_list)) or (len(prec10_list) != len(avg_list))):

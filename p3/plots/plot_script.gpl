@@ -9,8 +9,8 @@ set ytics font "Times-Roman, 10"
 #set yrange [0:35]
 set xtic auto                          # set xtics automatically
 set ytic auto                          # set ytics automatically
-set title "Average precision - Robust-community (Sampled)" font "Times-Roman, 15"
+set title "NDCG at 10 - books - class" font "Times-Roman, 15"
 set xlabel "Query numbers" font "Times-Roman, 15"
-set ylabel "Average precision" font "Times-Roman, 15"
+set ylabel "NDCG at 10" font "Times-Roman, 15"
 set grid
-plot "base-robust-comm.dat-sample" using 2:xticlabels(1) title "Baseline (P2)" with linespoints, "cor-robust-comm.dat-sample" using 2:xticlabels(1) title "Correlation" with linespoints, "wn-robust-comm.dat-sample" using 2:xticlabels(1) title "Wordnet" with linespoints, "comb-robust-comm.dat-sample" using 2:xticlabels(1) title "Combined" with linespoints
+plot "base-books-class-ndcg10.dat" using 2:xticlabels(1) title "Baseline (P2)" with linespoints, "cor-books-class-ndcg10.dat" using 2:xticlabels(1) title "Correlation" with linespoints, "wn-books-class-ndcg10.dat" using 2:xticlabels(1) title "Wordnet" with linespoints, "comb-books-class-ndcg10.dat" using 2:xticlabels(1) title "Combined" with linespoints
